@@ -16,7 +16,7 @@ public class testeCap1 {
 			Digita("--------------------------------- ", TimeUnit.MILLISECONDS, temp_dialog);
 			Digita("\n|        Virtual Bhaskara       |", TimeUnit.MILLISECONDS, temp_dialog);
 			Digita("\n--------------------------------- ", TimeUnit.MILLISECONDS, temp_dialog);
-			Digita("\n\nPrecione 1 para iniciar.\nPrecione 2 para sair.", TimeUnit.MILLISECONDS, temp_dialog);
+			Digita("\n Pressione 1 para iniciar.\n Pressione 2 para sair.", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("\n");
 			escolha = entrada.nextInt();
 			if (escolha == 1) {
@@ -173,7 +173,7 @@ public class testeCap1 {
 		Digita("\nNarrador: Você e " + nome_amiga + " estavam a meses esperando o novo jogo VIRTUAL DUNGEON, então, os dois vão correndo até a loja de games.", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\nVendedor: Eai galera! acabou de chegar um estoque do novo jogo, e separei dois para os meus clientes favoritos!", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\n" + nome_amiga + ": Primeiro euu :P", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nNarrador: Voce... \n1.Compra logo o jogo! \n2.Ta duro...", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\nNarrador: Você... \n1.Compra logo o jogo! \n2.Ta duro...", TimeUnit.MILLISECONDS, temp_narrativa);
 		System.out.println("\n");
 		int escolha_loja = entrada.nextInt();
 		do {
@@ -195,8 +195,8 @@ public class testeCap1 {
 		Digita("\n" + nome_amiga + ": Ai, vc tbm sentiu aquilo? Doeu um pouco, mas deve ser o jogo calibrando né?", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n" + nome_amiga + ": Caraca, olha esses gráficos! Parece mesmo a vida real!", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\n" + nome_amiga + ": Olha ali, os jogadores estão se reunindo na praça principal, vamos até lá!", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nNarrador: Ao chegar na praça principal, voces veem uma multidão enorme em volta de um telão.", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nVoz do telão: Sejam muito bem vindos ao VIRTUAL DUNGEON! Espero que voces gostem de aventura e muito...", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\nNarrador: Ao chegar na praça principal, vocês veem uma multidão enorme em volta de um telão.", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\nVoz do telão: Sejam muito bem vindos ao VIRTUAL DUNGEON! Espero que vocês gostem de aventura e muito...", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\nNarrador: A voz é estranhamente interrompida por um som extremamente ensurdecedor, e todas as luzes da cidade começam a bugar intensamente. Quando o som para, todos os jogadores se olham em dúvida.", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\nPlayer aleatório: Ah que saco! Gastei dinheiro com essa porcaria e nem funciona!! To fora! Pera, eu não to conseguindo sair do jogo!!", TimeUnit.MILLISECONDS,
 			temp_narrativa);
@@ -204,20 +204,20 @@ public class testeCap1 {
 			temp_narrativa);
 		Digita("\n\n" + nome_amiga + ":Iran, o que vamos fazer???", TimeUnit.MILLISECONDS,
 			temp_narrativa);
-		Digita("\n\nNarrador: Voce...", TimeUnit.MILLISECONDS,
+		Digita("\n\nNarrador: Você...", TimeUnit.MILLISECONDS,
 			temp_narrativa);
-		Digita("\n\n(1) Pega na mão da sua amiga e voces dois correm para um lugar seguro. \n(2) Voce ignora ela e tenta desesperadamente sair do jogo. ", TimeUnit.MILLISECONDS,
+		Digita("\n\n(1) Pega na mão da sua amiga e vocês dois correm para um lugar seguro. \n(2) Você ignora ela e tenta desesperadamente sair do jogo. ", TimeUnit.MILLISECONDS,
 			temp_narrativa);
 		System.out.println("\n");
 		int escolha1 = entrada.nextInt();
 		do {
 			if (escolha1 == 1) {
 				Digita("\n\nIran: Vem comigo!", TimeUnit.MILLISECONDS, temp_narrativa);
-				Digita("\n\nNarrador: Voce e " + nome_amiga + " entram dentro de uma das casas da cidade, e se escondem enquanto escutam o som da população enlouquecida.", TimeUnit.MILLISECONDS, temp_narrativa);
+				Digita("\n\nNarrador: Você e " + nome_amiga + " entram dentro de uma das casas da cidade, e se escondem enquanto escutam o som da população enlouquecida.", TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\n" + nome_amiga + ": Vai ficar tudo bem, não vai?.", TimeUnit.MILLISECONDS, temp_narrativa);
 				confiancaAmiga[0]++;
 			} else if (escolha1 == 2) {
-				Digita("\n\nNarrador: Por mais que vc tente, voce não consegue sair do jogo.", TimeUnit.MILLISECONDS, temp_narrativa);
+				Digita("\n\nNarrador: Por mais que vc tente, Você não consegue sair do jogo.", TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\nNarrador: Depois de longos e cansativos minutos, vc desiste. Ao procurar sua amiga, você a encontra inconsciente no chão.", TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\nIran: " + nome_amiga + "! Você ta bem???", TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\nNarrador: Você leva sua amiga até uma casa da cidade, e cuida dos ferimentos dela.", TimeUnit.MILLISECONDS, temp_narrativa);
