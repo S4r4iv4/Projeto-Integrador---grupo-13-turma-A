@@ -1,13 +1,13 @@
-package exercicio1;
+package java;
 
 import java.io.DataInput;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class ado7 {
+public class ex1 {
 
-	static int temp_dialog = 1, temp_narrativa = 1, temp_transicao = 0;
+	static int temp_dialog = 1, temp_narrativa = 1, temp_transicao = 1, temp_segundo = 1;
 	public static int reputacaoGrupo = 0;
 	public static int danoDoIran = 25;
 	public static int vidaDoIran = 100;
@@ -710,7 +710,7 @@ public class ado7 {
 			}
 			vidaInimigo -= danoJogador;
 
-			// Ataque do inimigo
+			
 			int danoInimigo = 18;
 			vidaJogador -= danoInimigo;
 			Digita("\nO inimigo atacou você e causou " + danoInimigo + " de dano." + "\n\nVida atual: " + "\nVocê: "
@@ -730,9 +730,9 @@ public class ado7 {
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 
-		int coeficiente = random.nextInt(10) + 1; // Coeficiente aleatório entre 1 e 10
-		int constante = random.nextInt(20) + 1; // Constante aleatória entre 1 e 20
-		int resultadoC = coeficiente * random.nextInt(20) + 10 + constante; // Resultado da equação
+		int coeficiente = random.nextInt(10) + 1; 
+		int constante = random.nextInt(20) + 1; 
+		int resultadoC = coeficiente * random.nextInt(20) + 10 + constante; 
 
 		if (critico) {
 			Digita("\nResolva a equação para efetuar o ataque crítico: " + coeficiente + "x + " + constante + " = "
@@ -749,18 +749,110 @@ public class ado7 {
 		int resultado = ((resultadoC - constante) / coeficiente);
 		if (resposta == resultado) {
 			if (critico) {
-				return danoDoIran + (danoDoIran / 2); // Dano crítico é o dobro do dano normal
+				return danoDoIran + (danoDoIran / 2); 
 			} else {
 				return danoDoIran;
 			}
 		} else {
-			return 0; // Se a resposta estiver incorreta, não causa dano
+			return 0; 
 		}
 
 	}
 
 	public static void capitulo2_4() throws Exception {
 
+		Scanner sc = new Scanner(System.in);
+
+		String perso1 = "Róger Guedes";
+		String perso2 = "segundo integrante";
+		String perso3 = "Pablo Marçal";
+		String perso4 = "manéu gomes";
+
+		Digita("\n\n" + perso4 + ": Nossa! você é mesmo muito bom nisso."
+				+ "\n\nNarrador: como ja esta ficando tarde, o primeiro e o segundo integrante voltam de seus postos."
+				+ "\n\n" + perso1 + ": Em resumo, pegamos algumas comidas e achamos uma chalé para passarmos a noite."
+				+ "\nComo andou o treino de hoje?" + "\n\n" + perso3
+				+ ": Hoje nós treinamos aquelas contas de mutiplicação e divisão na folha de calculos e o " + perso4
+				+ "teve uma batalha com o Iran como treinamendo, e o Iran ganhou a batalha!" + "\n\n" + perso4
+				+ ": Ocorreu mais coisas no dia de vocês dois?" + "", TimeUnit.MILLISECONDS, temp_narrativa);
+
+		perso2 = "Xx_king_2012_xX";
+		System.out.println("\n\n" + perso1
+				+ ": Bom, já tá ficando tarde. Vamos pro chalé antes que outro maluco entre e nos roube o lugar."
+				+ "\n\n" + perso3 + ": Boa ideia, vamos nessa.");
+
+		Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n " + "\n ‎", TimeUnit.MILLISECONDS, temp_segundo);
+
+		Digita("\n\nNarrador: Depois de uma caminhada sinistra em direção ao chalé, vocês finalmente chegam e se acomodam lá."
+				+ "\nCada um encontra seu canto para passar a noite, e você encontra o seu."
+				+ "\nÀ medida que tenta dormir, calafrios percorrem sua espinha, mas você os ignora rapidamente e fecha os olhos.",
+				TimeUnit.MILLISECONDS, temp_transicao);
+
+		Digita("\n\n." + "\n.." + "\n..." + "\n...." + "\n...", TimeUnit.MILLISECONDS, temp_segundo);
+
+		Digita("\n\n!!!!!!!!!!", TimeUnit.MILLISECONDS, temp_dialog);
+
+		Digita("\nNarrador: VOCÊ ACORDA AO SOM DE UM GRITO DESESPERADO VINDO DO LADO DE FORA DO CHALÉ!"
+				+ "\nVocê reconhece o grito e se apressa para investigar.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+		Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
+
+		Digita("\nChegando lá, você entra na floresta, entre as árvores, e se depara com alguém, com um MACHADO CRAVADO NA CABEÇA, clamando por ajuda!"
+				+ "\nÀ medida que se aproxima, percebe que é Alice, chorando convulsivamente e suplicando por socorro."
+				+ "\n" + "\n(1) Fica calma, Alice. Estou aqui para ajudar."
+				+ "\n(2) Como diabos você veio parar aqui, Alice? Isso não pode ser real.", TimeUnit.MILLISECONDS,
+				temp_narrativa);
+		int pesadelo = sc.nextInt();
+
+		if (pesadelo == 1) {
+			Digita("\n\nAlice: COMO EU POSSO FICAR CALMA??? EU VOU MORRER.", TimeUnit.MILLISECONDS, temp_dialog);
+		} else if (pesadelo == 2) {
+			Digita("\n\nAlice: EU NÃO FAÇO A MÍNIMA IDEIA DO QUE ESTÁ ACONTECENDO, SÓ ME TIRA DAQUI, POR FAVOR, DOI MUITO.",
+					TimeUnit.MILLISECONDS, temp_dialog);
+		} else {
+			System.out.println("Essa opção não existe!");
+			sc.close();
+		}
+
+		Digita("\n\nNarrador: Você tenta ajudá-la, mas se sente impotente. Ajudá-la a andar é tudo o que consegue fazer enquanto voltam para o chalé."
+				+ "Caminhando, vocês são atacados por flechas, uma atinge seu peito."
+				+ "Ao olhar para a flecha em seu peito, você ergue levemente a cabeça e vê uma fechada em direção à sua cabeça, e",
+				TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("....", TimeUnit.MILLISECONDS, temp_segundo);
+
+		Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
+
+		Digita("AAAAAAAAAAA", TimeUnit.MILLISECONDS, temp_dialog);
+
+		Digita("\n\nNarrador: Você acorda, tudo não passou de um terrível pesadelo.", TimeUnit.MILLISECONDS,
+				temp_narrativa);
+		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("\nOlhando ao redor, vê todos ainda dormindo, mesmo após seu grito, todos permaneceram inerte por estarem exaustos."
+				+ "\nVocê se levanta e o pesadelo retorna à sua mente." + "\nUm sentimento de raiva te consome..."
+				+ "\nInconscientemente, pensamentos de vingança contra o grupo que tirou a vida de Alice começam a surgir."
+				+ "\nVocê sente uma leve vontade de ignorar esses sentimentos e voltar a dormir."
+				+ "\nApesar da indecisão, você sabe que precisa tomar uma decisão", TimeUnit.MILLISECONDS,
+				temp_transicao);
+		
+		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
+		
+		Digita( "\n\n‎‎ "
+				+ "\n‎‎ "
+				, TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, voce mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
+				+ "\n(2). voltar a dormir, ao voltar a dormir voce ignora todos aqules sentimentos de raiva e ódio, voce da mais valor ao seu grupo de amigos e aceita essa nova vida.", TimeUnit.MILLISECONDS, temp_narrativa);
+		int escolha_final = sc.nextInt();
+		
+		if (escolha_final == 1 ) {
+			buscarVinganca();
+		}else if (escolha_final == 2) {
+			voltaDormir();
+		}else {
+			System.out.println("eu nao dei essa opcao!");
+		}
+		
+		
+		
 	}
 
 	public static void capitulo2_3_2() throws Exception {
@@ -769,6 +861,19 @@ public class ado7 {
 		capitulo2_3_1();
 
 	}
+	
+	
+	public static void buscarVinganca() throws Exception {
+		
+		
+	}
+	
+	public static void voltaDormir() throws Exception {
+		
+		
+	}
+	
+	
 
 	public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
 		for (char caractere : mensagem.toCharArray()) {
