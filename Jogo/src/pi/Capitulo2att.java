@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Capitulo2att {
 
-	static int temp_dialog = 25, temp_narrativa = 40, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
+	static int temp_dialog = 0, temp_narrativa = 0, temp_transicao = 0, temp_segundo = 0, temp_drama = 0;
 	public static int reputacaoGrupo = 0;
 	public static int danoDoIran = 25;
 	public static int vidaDoIran = 100;
@@ -20,7 +20,7 @@ public class Capitulo2att {
 			Digita("--------------------------------- ", TimeUnit.MILLISECONDS, temp_dialog);
 			Digita("\n|        Virtual Bhaskara       |", TimeUnit.MILLISECONDS, temp_dialog);
 			Digita("\n--------------------------------- ", TimeUnit.MILLISECONDS, temp_dialog);
-			Digita("\n\nPrecione 1 para iniciar.\nPrecione 2 para sair.", TimeUnit.MILLISECONDS, temp_dialog);
+			Digita("\n\nPressione 1 para iniciar.\nPressione 2 para sair.", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("\n");
 			escolha = entrada.nextInt();
 			if (escolha == 1) {
@@ -97,7 +97,7 @@ public class Capitulo2att {
 		String login, senha;
 		int escolhaLogin, escolhaCadastro;
 		do {
-			Digita("\nDesesa fazer cadastro? \n1.Sim \n2.Não", TimeUnit.MILLISECONDS, temp_dialog);
+			Digita("\nDeseja fazer cadastro? \n1.Sim \n2.Não", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("\n");
 			escolhaCadastro = entrada.nextInt();
 			if (escolhaCadastro == 1) {
@@ -186,7 +186,7 @@ public class Capitulo2att {
 		Digita("\n\nVendedor: Eai galera! acabou de chegar um estoque do novo jogo, e separei dois para os meus clientes favoritos!",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\n" + nome_amiga + ": Primeiro euu :P", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nNarrador: Voce... \n1.Compra logo o jogo! \n2.Ta duro...", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\nNarrador: Você... \n1.Compra logo o jogo! \n2.Ta duro...", TimeUnit.MILLISECONDS, temp_narrativa);
 		System.out.println("\n");
 		int escolha_loja = entrada.nextInt();
 		do {
@@ -207,15 +207,15 @@ public class Capitulo2att {
 		Digita("\nNarrador: Ao conectar no jogo, você sente uma dor estranha, mas não liga muito.",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\nNarrador: No lobby no jogo, vc escuta uma voz familiar...", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n" + nome_amiga + ": Ai, vc tbm sentiu aquilo? Doeu um pouco, mas deve ser o jogo calibrando né?",
+		Digita("\n" + nome_amiga + ": Ai, você tambm sentiu aquilo? Doeu um pouco, mas deve ser o jogo calibrando né?",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n" + nome_amiga + ": Caraca, olha esses gráficos! Parece mesmo a vida real!", TimeUnit.MILLISECONDS,
 				temp_narrativa);
 		Digita("\n\n" + nome_amiga + ": Olha ali, os jogadores estão se reunindo na praça principal, vamos até lá!",
 				TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nNarrador: Ao chegar na praça principal, voces veem uma multidão enorme em volta de um telão.",
+		Digita("\n\nNarrador: Ao chegar na praça principal, vocês veem uma multidão enorme em volta de um telão.",
 				TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nVoz do telão: Sejam muito bem vindos ao VIRTUAL DUNGEON! Espero que voces gostem de aventura e muito...",
+		Digita("\n\nVoz do telão: Sejam muito bem vindos ao VIRTUAL DUNGEON! Espero que vocês gostem de aventura e muito...",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\nNarrador: A voz é estranhamente interrompida por um som extremamente ensurdecedor, e todas as luzes da cidade começam a bugar intensamente. Quando o som para, todos os jogadores se olham em dúvida.",
 				TimeUnit.MILLISECONDS, temp_narrativa);
@@ -224,23 +224,23 @@ public class Capitulo2att {
 		Digita("\n\nNarrador: Todos os players tentam incansavelmente sair do jogo, mas sem sucesso. Uma onda de desespero atinge a cidade, e tudo se torna um grande caos!",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\n" + nome_amiga + ":Iran, o que vamos fazer???", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\nNarrador: Voce...", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\n(1) Pega na mão da sua amiga e voces dois correm para um lugar seguro. \n(2) Voce ignora ela e tenta desesperadamente sair do jogo. ",
+		Digita("\n\nNarrador: Você...", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\n(1) Pega na mão da sua amiga e vocês dois correm para um lugar seguro. \n(2) Você ignora ela e tenta desesperadamente sair do jogo. ",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		System.out.println("\n");
 		int escolha1 = entrada.nextInt();
 		do {
 			if (escolha1 == 1) {
 				Digita("\n\nIran: Vem comigo!", TimeUnit.MILLISECONDS, temp_narrativa);
-				Digita("\n\nNarrador: Voce e " + nome_amiga
+				Digita("\n\nNarrador: Você e " + nome_amiga
 						+ " entram dentro de uma das casas da cidade, e se escondem enquanto escutam o som da população enlouquecida.",
 						TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\n" + nome_amiga + ": Vai ficar tudo bem, não vai?.", TimeUnit.MILLISECONDS, temp_narrativa);
 				confiancaAmiga[0]++;
 			} else if (escolha1 == 2) {
-				Digita("\n\nNarrador: Por mais que vc tente, voce não consegue sair do jogo.", TimeUnit.MILLISECONDS,
+				Digita("\n\nNarrador: Por mais que você tente, você não consegue sair do jogo.", TimeUnit.MILLISECONDS,
 						temp_narrativa);
-				Digita("\n\nNarrador: Depois de longos e cansativos minutos, vc desiste. Ao procurar sua amiga, você a encontra inconsciente no chão.",
+				Digita("\n\nNarrador: Depois de longos e cansativos minutos, você desiste. Ao procurar sua amiga, você a encontra inconsciente no chão.",
 						TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\nIran: " + nome_amiga + "! Você ta bem???", TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita("\n\nNarrador: Você leva sua amiga até uma casa da cidade, e cuida dos ferimentos dela.",
@@ -258,7 +258,7 @@ public class Capitulo2att {
 		if (escolha2 == 1) {
 			if (escolha1 == 1) {
 				Digita("Iran: " + nome_amiga + ", vamos ver o que tem aqui.", TimeUnit.MILLISECONDS, temp_narrativa);
-				Digita("Narrador: Ao encostar na caixa, você se deparacom uma estranha conta matemática: ",
+				Digita("Narrador: Ao encostar na caixa, você se depara com uma estranha conta matemática: ",
 						TimeUnit.MILLISECONDS, temp_narrativa);
 				Digita(nome_amiga + ": Parece uma equação de primeiro grau! Vamos resolver e ver o que tem nela!",
 						TimeUnit.MILLISECONDS, temp_narrativa);
@@ -269,7 +269,7 @@ public class Capitulo2att {
 						TimeUnit.MILLISECONDS, temp_narrativa);
 				int x;
 				do {
-					Digita("\n\nNarrador: Então, voce chega a conclusão que x é igual a: ", TimeUnit.MILLISECONDS,
+					Digita("\n\nNarrador: Então, Você chega a conclusão que x é igual a: ", TimeUnit.MILLISECONDS,
 							temp_narrativa);
 					x = entrada.nextInt();
 					if (x == (-2)) {
@@ -293,18 +293,18 @@ public class Capitulo2att {
 
 		Scanner sc = new Scanner(System.in);
 
-		Digita("\n\nNarrador: Após uma noite de sono em cima de uma arvore, voce encontra um grupo de quatro integrantes treinando e estudando o jogo pra ficarem mais fortes.",
+		Digita("\n\nNarrador: Após uma noite de sono em cima de uma árvore, você encontra um grupo de quatro integrantes treinando e estudando o jogo pra ficarem mais fortes.",
 				TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\nPensando consigo mesmo, voce decide se aproximar deles.", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\nPensando consigo mesmo, Você decide se aproximar deles.", TimeUnit.MILLISECONDS, temp_narrativa);
 		String perso1 = "primeiro integrante";
 		String perso2 = "segundo integrante";
 		String perso3 = "terceiro integrante";
 		String perso4 = "quarto integrante";
 
 		Digita("\n\n" + perso1, TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita(": Quem é voce?", TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("\n\n(1) meu nome é Iran, e eu estou sozinho por agora, posso me juntar a voces?"
-				+ "\n(2) voces nao precisam saber meu nome, quem são voces?", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita(": Quem é Você?", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\n(1) meu nome é Iran, e eu estou sozinho por agora, posso me juntar a vocês?"
+				+ "\n(2) vocês nao precisam saber meu nome, quem são vocês?", TimeUnit.MILLISECONDS, temp_narrativa);
 
 		System.out.println("\n");
 		int opcaoResposta = sc.nextInt();
@@ -316,10 +316,10 @@ public class Capitulo2att {
 			Digita(": Claro!, prazer em te conhecer Iran, me chamo Róger Guedes, nós estavamos treinando, se quiser pode se juntar a gente.",
 					TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": voce ja havia treinado antes nesse jogo? Estamos com alguma dificuldades pra aprender a jogar mas ja pegamos mais ou menos o jeito do jogo, nós podemos ensinar algumas coisas"
-					+ "\npra voce e em troca voce pode nos ajudar a ficarmos mais fortes.", TimeUnit.MILLISECONDS,
+			Digita(": Você já havia treinado antes nesse jogo? Estamos com alguma dificuldades pra aprender a jogar mas ja pegamos mais ou menos o jeito do jogo, nós podemos ensinar algumas coisas"
+					+ "\npra Você e em troca você pode nos ajudar a ficarmos mais fortes.", TimeUnit.MILLISECONDS,
 					temp_narrativa);
-			Digita("\n\n(1) Sim, eu estava treinando com uma amiga a algum tempo, nós aprendemos algumas coisas bem legais que eu posso compartilhar com voces."
+			Digita("\n\n(1) Sim, eu estava treinando com uma amiga a algum tempo, nós aprendemos algumas coisas bem legais que eu posso compartilhar com vocês."
 					+ "\n(2) Não, eu ainda nem tive a oportunidade de treinar ou de explorar o mapa pois ainda sou muito novato.",
 					TimeUnit.MILLISECONDS, temp_narrativa);
 
@@ -336,7 +336,7 @@ public class Capitulo2att {
 			} else if (opcaoResposta2 == 2) {
 				reputacaoGrupo++;
 				Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-				Digita(": Não tem problema! nós vamos te ensinar varias coisas pra voce se familiarizar com o jogo e se tornar mais forte.",
+				Digita(": Não tem problema! nós vamos te ensinar varias coisas pra Você se familiarizar com o jogo e se tornar mais forte.",
 						TimeUnit.MILLISECONDS, temp_narrativa);
 				capitulo2_2();
 
@@ -350,10 +350,10 @@ public class Capitulo2att {
 		case 2: {
 
 			Digita("\n" + perso1, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": Prazer, me chamo Róger Guedes, nós estamos treinando por agoora, voce tem algum em interesse em se juntar a gente?",
+			Digita(": Prazer, me chamo Róger Guedes, nós estamos treinando por agoora, Você tem algum em interesse em se juntar a gente?",
 					TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n\n(1) Sim, temho interesse em me juntar a voces."
-					+ "\n(2) Não sei se posso confiar em voces ainda.", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\n(1) Sim, tenho interesse em me juntar a vocês."
+					+ "\n(2) Não sei se posso confiar em vocês ainda.", TimeUnit.MILLISECONDS, temp_narrativa);
 
 			System.out.println("\n");
 			int opcaoResposta3 = sc.nextInt();
@@ -361,13 +361,13 @@ public class Capitulo2att {
 				if (opcaoResposta3 == 1) {
 					reputacaoGrupo++;
 					Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-					Digita(": Ok, voce pode se juntar a gente, mas vamos ficar de olho em voce por enquanto ate terermos um laço mais forte de confinça.",
+					Digita(": Ok, Você pode se juntar a gente, mas vamos ficar de olho em você por enquanto até termos um laço mais forte de confiança.",
 							TimeUnit.MILLISECONDS, temp_narrativa);
 
-					Digita(": voce ja havia treinado antes nesse jogo? Estamos com alguma dificuldades pra aprender a jogar mas ja pegamos mais ou menos o jeito do jogo, nós podemos ensinar algumas coisas"
-							+ "\npra voce e em troca voce pode nos ajudar a ficarmos mais fortes.",
+					Digita(": Você já havia treinado antes nesse jogo? Estamos com alguma dificuldades pra aprender a jogar mas ja pegamos mais ou menos o jeito do jogo, nós podemos ensinar algumas coisas"
+							+ "\npra você e em troca você pode nos ajudar a ficarmos mais fortes.",
 							TimeUnit.MILLISECONDS, temp_narrativa);
-					Digita("\n\n(1) Sim, eu estava treinando com uma amiga a algum tempo, nós aprendemos algumas coisas bem legais que eu posso compartilhar com voces."
+					Digita("\n\n(1) Sim, eu estava treinando com uma amiga a algum tempo, nós aprendemos algumas coisas bem legais que eu posso compartilhar com vocês."
 							+ "\n(2) Não, eu ainda nem tive a oportunidade de treinar ou de explorar o mapa pois ainda sou muito novato.",
 							TimeUnit.MILLISECONDS, temp_narrativa);
 
@@ -383,7 +383,7 @@ public class Capitulo2att {
 					} else if (opcaoResposta4 == 2) {
 
 						Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-						Digita(": Não tem problema! nós vamos te ensinar varias coisas pra voce se familiarizar com o jogo e se tornar mais forte.",
+						Digita(": Não tem problema! Nós vamos te ensinar varias coisas pra você se familiarizar com o jogo e se tornar mais forte.",
 								TimeUnit.MILLISECONDS, temp_narrativa);
 						capitulo2_2();
 
@@ -395,7 +395,7 @@ public class Capitulo2att {
 
 				} else if (opcaoResposta3 == 2) {
 					Digita("\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
-					Digita(": voce tambem não acha que nós podemos desconfiar de voce? E que teria uma chance de estarmos sendo enganados por voce?",
+					Digita(": Você tambem não acha que nós podemos desconfiar de Você? E que teria uma chance de estarmos sendo enganados por você?",
 							TimeUnit.MILLISECONDS, temp_narrativa);
 					Digita("\nNarrador: Mesmo relutante, você acena com a cabeça para o quarto integrante do grupo e concorda previamente em entrar no grupo desses jogadores.",
 							TimeUnit.MILLISECONDS, temp_narrativa);
@@ -429,14 +429,14 @@ public class Capitulo2att {
 			// sua reputação do grupo é 3/3
 
 			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\nNarrador: Você segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
 			perso3 = "Pablo Marçal";
 			Digita("\n\n" + perso3, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Vamos voltar a treinar sim!", TimeUnit.MILLISECONDS, temp_narrativa);
 
-			Digita("\nIran, antes de voce ir treinar pegue esse item, como voce faz parte do nosso grupo agora, voce vai ter que ficar mais forte"
+			Digita("\nIran, antes de Você ir treinar pegue esse item, como você faz parte do nosso grupo agora, você vai ter que ficar mais forte"
 					+ "\npara nos ajudar em nossas batalhas!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n*********************" + "\nDANO AUMENTADO EM 30%" + "\n*********************\n",
 					TimeUnit.MILLISECONDS, temp_narrativa);
@@ -453,7 +453,7 @@ public class Capitulo2att {
 			} else if (opcaoTreino3 == 44) {
 				capitulo2_3();
 			} else {
-				System.out.println("nao existe essa opcao");
+				System.out.println("Não existe essa opcao");
 			}
 
 			break;
@@ -463,7 +463,7 @@ public class Capitulo2att {
 			// sua reputação do grupo é 2/3
 
 			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\nNarrador: Você segue o terceiro e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
 			perso3 = "Pablo Marçal";
@@ -471,7 +471,7 @@ public class Capitulo2att {
 			Digita(": Vamos voltar a treinar sim!", TimeUnit.MILLISECONDS, temp_narrativa);
 
 			Digita("\n" + perso3
-					+ ": Iran, antes de voce ir treinar pegue esse item, como voce faz parte do nosso grupo agora, voce vai ter que ficar mais forte"
+					+ ": Iran, antes de você ir treinar pegue esse item, como você faz parte do nosso grupo agora, você vai ter que ficar mais forte"
 					+ "\npara nos ajudar em nossas batalhas!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n*********************" + "\nDANO AUMENTADO EM 20%" + "\n*********************\n",
 					TimeUnit.MILLISECONDS, temp_narrativa);
@@ -488,7 +488,7 @@ public class Capitulo2att {
 			} else if (opcaoTreino2 == 44) {
 				capitulo2_3();
 			} else {
-				System.out.println("nao existe essa opcao");
+				System.out.println("Não existe essa opcao");
 			}
 
 			break;
@@ -498,7 +498,7 @@ public class Capitulo2att {
 			// sua reputação do grupo é 1/3
 
 			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\nNarrador: Você segue o terceiro e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
 			perso3 = "Pablo Marçal";
@@ -506,7 +506,7 @@ public class Capitulo2att {
 			Digita(": Vamos voltar a treinar sim!", TimeUnit.MILLISECONDS, temp_narrativa);
 
 			Digita("\n" + perso3
-					+ ": Iran, antes de voce ir treinar pegue esse item, como voce faz parte do nosso grupo agora, voce vai ter que ficar mais forte"
+					+ ": Iran, antes de você ir treinar pegue esse item, como você faz parte do nosso grupo agora, você vai ter que ficar mais forte"
 					+ "\npara nos ajudar em nossas batalhas!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n*********************" + "\nDANO AUMENTADO EM 10%" + "\n*********************\n",
 					TimeUnit.MILLISECONDS, temp_narrativa);
@@ -523,7 +523,7 @@ public class Capitulo2att {
 			} else if (opcaoTreino1 == 44) {
 				capitulo2_3();
 			} else {
-				System.out.println("nao existe essa opcao");
+				System.out.println("Não existe essa opcao");
 			}
 
 			break;
@@ -533,7 +533,7 @@ public class Capitulo2att {
 			// sua reputação do grupo é 0/3
 
 			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\nNarrador: Você segue o terceiro e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
 			perso3 = "Pablo Marçal";
@@ -550,14 +550,14 @@ public class Capitulo2att {
 			} else if (opcaoTreino == 44) {
 				capitulo2_3();
 			} else {
-				System.out.println("nao existe essa opcao");
+				System.out.println("Não existe essa opcao");
 			}
 
 			break;
 
 		default:
 
-			System.out.println("nao existe essa opcao");
+			System.out.println("Não existe essa opcao");
 		}
 
 	}
@@ -667,11 +667,11 @@ public class Capitulo2att {
 		String perso3 = "terceiro integrante";
 		String perso4 = "quarto integrante";
 
-		Digita("\n\n" + perso3 + ": Boa!! Agora que voce ja treinou podemos iniciar uma simulação de confronto."
-				+ "\nVoce pode fazer essa simulação com o manéu gomes", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\n" + perso3 + ": Boa!! Agora que Você ja treinou podemos iniciar uma simulação de confronto."
+				+ "\nVocê pode fazer essa simulação com o manéu gomes", TimeUnit.MILLISECONDS, temp_narrativa);
 		perso4 = "manéu gomes";
-		Digita("\n\n" + perso4 + ": Vem tranquilo que eu não vou deixar voce ganhar facil não."
-				+ "\n\nNarrador: voce entra em uma batalha com o quarto integrante do grupo.", TimeUnit.MILLISECONDS,
+		Digita("\n\n" + perso4 + ": Vem tranquilo que eu não vou deixar você ganhar facil não."
+				+ "\n\nNarrador: Você entra em uma batalha com o quarto integrante do grupo.", TimeUnit.MILLISECONDS,
 				temp_narrativa);
 
 		Digita("\n\n\nBem-vindo à batalha!", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -831,8 +831,8 @@ public class Capitulo2att {
 		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
 
 		Digita("\n\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
-		Digita("\n(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, voce mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
-				+ "\n(2). voltar a dormir, ao voltar a dormir voce ignora todos aqules sentimentos de raiva e ódio, voce da mais valor ao seu grupo de amigos e aceita essa nova vida.",
+		Digita("\n(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, você mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
+				+ "\n(2). Voltar a dormir, ao voltar a dormir você ignora todos aqueles sentimentos de raiva e ódio, você da mais valor ao seu grupo de amigos e aceita essa nova vida.\n",
 				TimeUnit.MILLISECONDS, temp_narrativa);
 		int escolha_final = sc.nextInt();
 
@@ -841,7 +841,7 @@ public class Capitulo2att {
 		} else if (escolha_final == 2) {
 			voltaDormir();
 		} else {
-			System.out.println("eu nao dei essa opcao!");
+			System.out.println("eu não dei essa opcao!");
 			sc.close();
 		}
 
@@ -855,8 +855,43 @@ public class Capitulo2att {
 	}
 
 	public static void buscarVinganca() throws Exception {
-
+		Scanner entrada = new Scanner(System.in);
+		
+		Digita("Narrador: Após uma chacina no chalé, você retoma sua consciência e fica desesperado com tudo aquilo,\n" 
+		+ "Não acreditando que fosse capaz de tamanha brutalidade e explosão de força.\n" 
+		+ " Decide então, seguir mesmo assim e tentar concertar seus erros e não ser apenas mais um player incapaz de controlar seu poder!", TimeUnit.MILLISECONDS, temp_narrativa);
+		
+		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("\n(1). Saquear todos seus amigos que você matou para tentar adquirir recursos que fossem importantes para sua vingança. " +"\n(2). Ir sem mexer em nada totalmente arrependido pelo que fez e com sentimento de culpa",TimeUnit.MILLISECONDS, temp_narrativa);
+		int escolha_saque = entrada.nextInt();
+		while (escolha_saque !=1 && escolha_saque !=2){
+		if (escolha_saque == 1) {
+			Digita("Você encontra alguns itens de primeiro socorros e um anel dourado\n com um simbolo de porção e não entende muito o que é, mas mesmo assim coloca no dedo por achar que é valioso",TimeUnit.MILLISECONDS, temp_dialog);
+		} else if (escolha_saque == 2) {
+			Digita(" Apenas vai em busca do seu objetivo!",TimeUnit.MILLISECONDS, temp_narrativa);
+		} else {
+			Digita ("Eu não dei essa opcao!",TimeUnit.MILLISECONDS, temp_narrativa);
+			entrada.close();
+		} 
+	   
 	}
+	Digita("Ao sair do chalé, você segue a caminho por uma trilha da floresta,\napós essa trilha se depara com uma estrada abandonada na qual,\n avista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela ", TimeUnit.MILLISECONDS, temp_narrativa);
+	Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
+	Digita("Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente\nVocê grita de raiva uma aura te contorna você sente um poder ainda mais forte dentro de você" ,TimeUnit.MILLISECONDS, temp_narrativa);
+	Digita("\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAA EU VOU MATAR VOCÊ", TimeUnit.MILLISECONDS, temp_dialog);
+	Digita("No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga.\n Avista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\n mas você está destinado a efetuar sua vingança. Você: ", TimeUnit.MILLISECONDS, temp_narrativa);
+	Digita("\n(1). Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. " +"\n(2). Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.",TimeUnit.MILLISECONDS, temp_narrativa);
+	int escolha_estrada = entrada.nextInt();
+	do{
+		if(escolha_estrada == 1){
+			Digita("");
+		}else if (escolha_estrada == 2){
+			Digita("");
+		}else{
+			Digita(" Eu não te dei essa opção! ")
+		}
+	}
+}
 
 	public static void voltaDormir() throws Exception {
 
@@ -869,5 +904,4 @@ public class Capitulo2att {
 		}
 
 	}
-
 }
