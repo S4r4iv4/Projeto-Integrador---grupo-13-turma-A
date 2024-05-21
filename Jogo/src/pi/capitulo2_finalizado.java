@@ -5,9 +5,9 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class ex1 {
+public class Capitulo2att {
 
-	static int temp_dialog = 1, temp_narrativa = 1, temp_transicao = 1, temp_segundo = 1;
+	static int temp_dialog = 25, temp_narrativa = 40, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
 	public static int reputacaoGrupo = 0;
 	public static int danoDoIran = 25;
 	public static int vidaDoIran = 100;
@@ -24,7 +24,7 @@ public class ex1 {
 			System.out.println("\n");
 			escolha = entrada.nextInt();
 			if (escolha == 1) {
-				capitulo2();
+				menu();
 			} else if (escolha == 2) {
 				Digita("Até a próxima!", TimeUnit.MILLISECONDS, temp_dialog);
 			} else {
@@ -301,7 +301,7 @@ public class ex1 {
 		String perso3 = "terceiro integrante";
 		String perso4 = "quarto integrante";
 
-		Digita("\n" + perso1, TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\n" + perso1, TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita(": Quem é voce?", TimeUnit.MILLISECONDS, temp_narrativa);
 		Digita("\n\n(1) meu nome é Iran, e eu estou sozinho por agora, posso me juntar a voces?"
 				+ "\n(2) voces nao precisam saber meu nome, quem são voces?", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -315,7 +315,7 @@ public class ex1 {
 			Digita("\n" + perso1, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Claro!, prazer em te conhecer Iran, me chamo Róger Guedes, nós estavamos treinando, se quiser pode se juntar a gente.",
 					TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": voce ja havia treinado antes nesse jogo? Estamos com alguma dificuldades pra aprender a jogar mas ja pegamos mais ou menos o jeito do jogo, nós podemos ensinar algumas coisas"
 					+ "\npra voce e em troca voce pode nos ajudar a ficarmos mais fortes.", TimeUnit.MILLISECONDS,
 					temp_narrativa);
@@ -428,8 +428,7 @@ public class ex1 {
 
 			// sua reputação do grupo é 3/3
 
-			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": Vem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -445,7 +444,7 @@ public class ex1 {
 
 			Digita("\nAgora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
-					temp_narrativa);
+					temp_transicao);
 			System.out.println("\n");
 			int opcaoTreino3 = sc.nextInt();
 
@@ -463,8 +462,7 @@ public class ex1 {
 
 			// sua reputação do grupo é 2/3
 
-			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": Vem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -481,7 +479,7 @@ public class ex1 {
 			Digita("\n" + perso3 + ": Agora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS,
 					temp_narrativa);
 			Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
-					temp_narrativa);
+					temp_transicao);
 			System.out.println("\n");
 			int opcaoTreino2 = sc.nextInt();
 
@@ -499,8 +497,7 @@ public class ex1 {
 
 			// sua reputação do grupo é 1/3
 
-			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": Vem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -517,7 +514,7 @@ public class ex1 {
 			Digita("\n" + perso3 + ": Agora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS,
 					temp_narrativa);
 			Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
-					temp_narrativa);
+					temp_transicao);
 			System.out.println("\n");
 			int opcaoTreino1 = sc.nextInt();
 
@@ -535,8 +532,7 @@ public class ex1 {
 
 			// sua reputação do grupo é 0/3
 
-			Digita("\n\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-			Digita(": Vem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
+			Digita("\nVem com a gente!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\nNarrador: Voce segue o terceiroe e o quarto integrante", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n\n" + perso4, TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita(": Agora nós vamos voltar a treinar Pablo Marçal?", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -545,7 +541,7 @@ public class ex1 {
 			Digita(": Vamos voltar a treinar sim!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\nIran, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS, temp_narrativa);
 			Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   TREINAR   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
-					temp_narrativa);
+					temp_transicao);
 			System.out.println("\n");
 			int opcaoTreino = sc.nextInt();
 
@@ -674,11 +670,12 @@ public class ex1 {
 		Digita("\n\n" + perso3 + ": Boa!! Agora que voce ja treinou podemos iniciar uma simulação de confronto."
 				+ "\nVoce pode fazer essa simulação com o manéu gomes", TimeUnit.MILLISECONDS, temp_narrativa);
 		perso4 = "manéu gomes";
-		Digita("\n" + perso4 + ": Vem tranquilo que eu não vou deixar voce ganhar facil não."
-				+ "\nNarrador: voce entra em uma batalha com o quarto integrante do grupo.", TimeUnit.MILLISECONDS,
+		Digita("\n\n" + perso4 + ": Vem tranquilo que eu não vou deixar voce ganhar facil não."
+				+ "\n\nNarrador: voce entra em uma batalha com o quarto integrante do grupo.", TimeUnit.MILLISECONDS,
 				temp_narrativa);
 
-		Digita("\nBem-vindo à batalha!", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\n\n\nBem-vindo à batalha!", TimeUnit.MILLISECONDS, temp_narrativa);
+		capitulo2_3_1();
 	}
 
 	public static void capitulo2_3_1() throws Exception {
@@ -710,7 +707,6 @@ public class ex1 {
 			}
 			vidaInimigo -= danoJogador;
 
-			
 			int danoInimigo = 18;
 			vidaJogador -= danoInimigo;
 			Digita("\nO inimigo atacou você e causou " + danoInimigo + " de dano." + "\n\nVida atual: " + "\nVocê: "
@@ -730,9 +726,9 @@ public class ex1 {
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 
-		int coeficiente = random.nextInt(10) + 1; 
-		int constante = random.nextInt(20) + 1; 
-		int resultadoC = coeficiente * random.nextInt(20) + 10 + constante; 
+		int coeficiente = random.nextInt(10) + 1;
+		int constante = random.nextInt(20) + 1;
+		int resultadoC = coeficiente * random.nextInt(20) + 10 + constante;
 
 		if (critico) {
 			Digita("\nResolva a equação para efetuar o ataque crítico: " + coeficiente + "x + " + constante + " = "
@@ -744,17 +740,17 @@ public class ex1 {
 
 		}
 
-		Digita("Digite o valor de x: ", TimeUnit.MILLISECONDS, temp_narrativa);
+		Digita("\nDigite o valor de x: ", TimeUnit.MILLISECONDS, temp_narrativa);
 		int resposta = scanner.nextInt();
 		int resultado = ((resultadoC - constante) / coeficiente);
 		if (resposta == resultado) {
 			if (critico) {
-				return danoDoIran + (danoDoIran / 2); 
+				return danoDoIran + (danoDoIran / 2);
 			} else {
 				return danoDoIran;
 			}
 		} else {
-			return 0; 
+			return 0;
 		}
 
 	}
@@ -773,13 +769,13 @@ public class ex1 {
 				+ "\n\n" + perso1 + ": Em resumo, pegamos algumas comidas e achamos uma chalé para passarmos a noite."
 				+ "\nComo andou o treino de hoje?" + "\n\n" + perso3
 				+ ": Hoje nós treinamos aquelas contas de mutiplicação e divisão na folha de calculos e o " + perso4
-				+ "teve uma batalha com o Iran como treinamendo, e o Iran ganhou a batalha!" + "\n\n" + perso4
+				+ " teve uma batalha com o Iran como treinamendo, e o Iran ganhou a batalha!" + "\n\n" + perso4
 				+ ": Ocorreu mais coisas no dia de vocês dois?" + "", TimeUnit.MILLISECONDS, temp_narrativa);
 
 		perso2 = "Xx_king_2012_xX";
-		System.out.println("\n\n" + perso1
+		Digita("\n\n" + perso1
 				+ ": Bom, já tá ficando tarde. Vamos pro chalé antes que outro maluco entre e nos roube o lugar."
-				+ "\n\n" + perso3 + ": Boa ideia, vamos nessa.");
+				+ "\n\n" + perso3 + ": Boa ideia, vamos nessa.", TimeUnit.MILLISECONDS, temp_narrativa);
 
 		Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n " + "\n ‎", TimeUnit.MILLISECONDS, temp_segundo);
 
@@ -788,7 +784,7 @@ public class ex1 {
 				+ "\nÀ medida que tenta dormir, calafrios percorrem sua espinha, mas você os ignora rapidamente e fecha os olhos.",
 				TimeUnit.MILLISECONDS, temp_transicao);
 
-		Digita("\n\n." + "\n.." + "\n..." + "\n...." + "\n...", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("\n\n." + "\n.." + "\n..." + "\n...." + "\n..", TimeUnit.MILLISECONDS, temp_segundo);
 
 		Digita("\n\n!!!!!!!!!!", TimeUnit.MILLISECONDS, temp_dialog);
 
@@ -815,44 +811,40 @@ public class ex1 {
 		}
 
 		Digita("\n\nNarrador: Você tenta ajudá-la, mas se sente impotente. Ajudá-la a andar é tudo o que consegue fazer enquanto voltam para o chalé."
-				+ "Caminhando, vocês são atacados por flechas, uma atinge seu peito."
-				+ "Ao olhar para a flecha em seu peito, você ergue levemente a cabeça e vê uma fechada em direção à sua cabeça, e",
+				+ "\nCaminhando, vocês são atacados por flechas, uma atinge seu peito."
+				+ "\nAo olhar para a flecha em seu peito, você ergue levemente a cabeça e vê uma fechada em direção à sua cabeça, e",
 				TimeUnit.MILLISECONDS, temp_narrativa);
-		Digita("....", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("....", TimeUnit.MILLISECONDS, temp_drama);
 
-		Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("\n\n\n\nAAAAAAAAAAA", TimeUnit.MILLISECONDS, temp_dialog);
 
-		Digita("AAAAAAAAAAA", TimeUnit.MILLISECONDS, temp_dialog);
-
-		Digita("\n\nNarrador: Você acorda, tudo não passou de um terrível pesadelo.", TimeUnit.MILLISECONDS,
+		Digita("\n\nNarrador: Você acorda, tudo não passou de um terrível pesadelo", TimeUnit.MILLISECONDS,
 				temp_narrativa);
-		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita(".....", TimeUnit.MILLISECONDS, temp_drama);
 		Digita("\nOlhando ao redor, vê todos ainda dormindo, mesmo após seu grito, todos permaneceram inerte por estarem exaustos."
-				+ "\nVocê se levanta e o pesadelo retorna à sua mente." + "\nUm sentimento de raiva te consome..."
+				+ "\nVocê se levanta e o pesadelo retorna à sua mente." + "\nUm sentimento de raiva te consome."
 				+ "\nInconscientemente, pensamentos de vingança contra o grupo que tirou a vida de Alice começam a surgir."
 				+ "\nVocê sente uma leve vontade de ignorar esses sentimentos e voltar a dormir."
 				+ "\nApesar da indecisão, você sabe que precisa tomar uma decisão", TimeUnit.MILLISECONDS,
 				temp_transicao);
-		
+
 		Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
-		
-		Digita( "\n\n‎‎ "
-				+ "\n‎‎ "
-				, TimeUnit.MILLISECONDS, temp_segundo);
-		Digita("(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, voce mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
-				+ "\n(2). voltar a dormir, ao voltar a dormir voce ignora todos aqules sentimentos de raiva e ódio, voce da mais valor ao seu grupo de amigos e aceita essa nova vida.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+		Digita("\n\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
+		Digita("\n(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, voce mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
+				+ "\n(2). voltar a dormir, ao voltar a dormir voce ignora todos aqules sentimentos de raiva e ódio, voce da mais valor ao seu grupo de amigos e aceita essa nova vida.",
+				TimeUnit.MILLISECONDS, temp_narrativa);
 		int escolha_final = sc.nextInt();
-		
-		if (escolha_final == 1 ) {
+
+		if (escolha_final == 1) {
 			buscarVinganca();
-		}else if (escolha_final == 2) {
+		} else if (escolha_final == 2) {
 			voltaDormir();
-		}else {
+		} else {
 			System.out.println("eu nao dei essa opcao!");
+			sc.close();
 		}
-		
-		
-		
+
 	}
 
 	public static void capitulo2_3_2() throws Exception {
@@ -861,19 +853,14 @@ public class ex1 {
 		capitulo2_3_1();
 
 	}
-	
-	
+
 	public static void buscarVinganca() throws Exception {
-		
-		
+
 	}
-	
+
 	public static void voltaDormir() throws Exception {
-		
-		
+
 	}
-	
-	
 
 	public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
 		for (char caractere : mensagem.toCharArray()) {
