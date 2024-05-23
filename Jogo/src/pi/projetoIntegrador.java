@@ -6,7 +6,7 @@ import java.math.*;
 import java.util.Random;
 
 public class projetoIntegrador {
-  static int temp_dialog = 0, temp_narrativa = 0, temp_transicao = 0, temp_segundo = 0, temp_drama = 0;
+  static int temp_dialog = 25, temp_narrativa = 40, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
   public static int reputacaoGrupo = 0;
   public static int danoDoIran = 25;
   public static int vidaDoIran = 100;
@@ -511,7 +511,7 @@ public class projetoIntegrador {
 
       int pontos = 0;
       int perguntasFeitas = 0;
-      int limitePerguntas = 1;
+      int limitePerguntas = 20;
 
       if (escolha == 1) {
         Digita("\n\nVocê escolheu ataques de Multiplicação!", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -907,7 +907,7 @@ public class projetoIntegrador {
 
       int pontos = 0;
       int perguntasFeitas = 0;
-      int limitePerguntas = 1;
+      int limitePerguntas = 15;
 
       if (escolha == 1) {
         Digita("\n\nVocê escolheu a área de Multiplicação!", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -1015,7 +1015,7 @@ public class projetoIntegrador {
     String perso4 = "manéu gomes";
 
     double vidaJogador = vidaDoIran;
-    int vidaInimigo = 1;
+    int vidaInimigo = 1000;
 
     while (vidaJogador > 0 && vidaInimigo > 0) {
       Digita("\n\nEscolha uma ação:" + "\n1. Atacar" + "\n2. Atacar com golpe crítico" + "\nSua escolha: ",
