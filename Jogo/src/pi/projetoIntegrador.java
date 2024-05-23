@@ -342,7 +342,7 @@ public class projetoIntegrador {
             x = entrada.nextInt();
             if (x == (-2)) {
               Digita(
-                  "Narrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você grarda no inventário.",
+                  "Narrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você guarda no inventário.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             } else if (x != (-2)) {
@@ -1191,7 +1191,7 @@ public class projetoIntegrador {
       int escolha_saque = entrada.nextInt();
       while (escolha_saque !=1 && escolha_saque !=2){
       if (escolha_saque == 1) {
-        Digita("Você encontra alguns itens de primeiro socorros e um anel dourado\n com um simbolo de porção e não entende muito o que é, mas mesmo assim coloca no dedo por achar que é valioso",TimeUnit.MILLISECONDS, temp_dialog);
+        Digita("Você encontra alguns itens de primeiro socorros,uma lança cujo nome era Lança de Zeus,e um anel dourado\n com um simbolo de porção e não entende muito o que é, mas mesmo assim coloca no dedo por achar que é valioso",TimeUnit.MILLISECONDS, temp_dialog);
       } else if (escolha_saque == 2) {
         Digita(" Apenas vai em busca do seu objetivo!",TimeUnit.MILLISECONDS, temp_narrativa);
       } else {
@@ -1200,27 +1200,59 @@ public class projetoIntegrador {
       } 
   
     }
-    Digita("Ao sair do chalé, você segue a caminho por uma trilha da floresta,\napós essa trilha se depara com uma estrada abandonada na qual,\n avista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela ", TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
-    Digita("Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente\nVocê grita de raiva uma aura te contorna você sente um poder ainda mais forte dentro de você" ,TimeUnit.MILLISECONDS, temp_narrativa);
+    Digita(
+        "Ao sair do chalé, você segue a caminho por uma trilha da floresta,\napós essa trilha se depara com uma estrada abandonada na qual,\n avista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela ",
+        TimeUnit.MILLISECONDS, temp_narrativa);
+    Digita("...", TimeUnit.MILLISECONDS, temp_drama);
+    Digita(
+        "Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente\nVocê grita de raiva uma aura te contorna você sente um poder ainda mais forte dentro de você",
+        TimeUnit.MILLISECONDS, temp_narrativa);
     Digita("\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAA EU VOU MATAR VOCÊ", TimeUnit.MILLISECONDS, temp_dialog);
-    Digita("No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga.\n Avista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\n mas você está destinado a efetuar sua vingança. Você: ", TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("\n(1). Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. " +"\n(2). Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.",TimeUnit.MILLISECONDS, temp_narrativa);
+    Digita(
+        "No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga.\n Avista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\n mas você está destinado a efetuar sua vingança. Você: ",
+        TimeUnit.MILLISECONDS, temp_narrativa);
+    Digita("\n(1). Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. "
+        + "\n(2). Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.",
+        TimeUnit.MILLISECONDS, temp_narrativa);
     int escolha_estrada = entrada.nextInt();
-    do{
-      if(escolha_estrada == 1){
-        Digita("",TimeUnit.MILLISECONDS, temp_narrativa);
-      }else if (escolha_estrada == 2){
-        Digita("",TimeUnit.MILLISECONDS, temp_narrativa);
-      }else{
-        Digita(" Eu não te dei essa opção! ",TimeUnit.MILLISECONDS, temp_narrativa);
+    do {
+      if (escolha_estrada == 1) {
+        Digita("No último momento arrastando toda a poeira a caminhote para frente a você\\n" + //
+            "No meio de toda poeira arrastada, a porta se abre e você, desesperado apenas entra pela porta buscando uma carona,\\n"
+            + //
+            " você senta no banco e olha para ao lado enquanto o condutor desconhecido apenas dirige pela estrada vazia. ",
+            TimeUnit.MILLISECONDS, temp_narrativa);
+      } else if (escolha_estrada == 2) {
+        Digita("Você decide ir andando ao encontro dos seus alvos...\\n" + //
+                    " correndo  na floresta, após escapar do acidente, se depara com uma alcateia de lobos Cybernéticos Assasinos...\\n" + //
+                                            "e apenas sua vontade de vingança não são suficientes.\\n" + //
+                                                                                            " Você morreu!", TimeUnit.MILLISECONDS, temp_narrativa);
+                                                                                            entrada.close();
+      } else {
+        Digita(" Eu não te dei essa opção! ", TimeUnit.MILLISECONDS, temp_narrativa);
       }
-    }while (escolha_estrada != 1 && escolha_estrada != 2);
-    }
+    } while (escolha_estrada != 1);
+        Digita("\nVocê não sabe para onde está indo, o motorista apenas dirige pela estrada sem fim...\n ele entra num atalho e você começa a avistar uma grande vila, e acaba reconhecendo alguns dos vigias.\n O motorista desconhecido tinha acesso a essa área. Você está mais perto do que imagina do seu alvo!", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\nO motorista de deixa perto de um ferreiro,\n a primeira coisa que você é pegar uma espada super quente e deferir contra sua perna,\n fazendo assim você ser socorrido por médicos locais e infiltrar a base. ",TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\nSe passando como paciente você consegue andar livremente pela vila, \nInvestigando o local descobre que aconteceu uma reunião para escolha de um lider.\n E esse líder era seu alvo, visto do Outdoor!",TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\nEscuta de moradores locais que haverá uma coroação, vendo assim sua chance de vingança!"
+             + "\nPara isso abre sua mochila para verificar se tem os intens necessários.",TimeUnit.MILLISECONDS, temp_narrativa);
+             Digita("Tecle E para ver mochila.");
+             String E;
+             String e;
+             switch (e) {
+              case E:
+                  
+                
+                break;
+             
+              default:
+                break;
+             }
+      }
+      
+  
 
-  public static void voltaDormir() throws Exception {
-
-  }
 
   public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
     for (char caractere : mensagem.toCharArray()) {
@@ -1229,4 +1261,10 @@ public class projetoIntegrador {
     }
 
   }
-}
+  
+
+//*digita '1 ' libertar todos jogadores vivos do jogo// digita '2' ressar alguem morto -- u2 vezea exibe mensagem de erro, 3 vez mostra erro critico e pergunta se tem certeza dessa opçao induzindo a clicar na 1, se 2 for escolhido morre e volta do começo */
+
+  
+
+sonho menina morrendo acorda desse em outro sonho
