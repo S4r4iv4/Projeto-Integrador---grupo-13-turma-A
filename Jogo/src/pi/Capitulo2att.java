@@ -882,17 +882,8 @@ public class Capitulo2att {
 	Digita("No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga.\n Avista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\n mas você está destinado a efetuar sua vingança. Você: ", TimeUnit.MILLISECONDS, temp_narrativa);
 	Digita("\n(1). Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. " +"\n(2). Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.",TimeUnit.MILLISECONDS, temp_narrativa);
 	int escolha_estrada = entrada.nextInt();
-	do{
-		if(escolha_estrada == 1){
-			Digita("");
-		}else if (escolha_estrada == 2){
-			Digita("");
-		}else{
-			Digita(" Eu não te dei essa opção! ")
-		}
+	
 	}
-}
-
 	public static void voltaDormir() throws Exception {
 
 	}
