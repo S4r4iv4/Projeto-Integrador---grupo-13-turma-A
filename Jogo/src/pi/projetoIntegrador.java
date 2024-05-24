@@ -1,11 +1,13 @@
+package cjkwegbc8yavbcua;
 
 import java.io.DataInput;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.math.*;
-import java.util.Random;
 
-public class projetoIntegrador {
+public class yqqyyqyyqyyqyqyqq {
+	
+	
   static int temp_dialog = 25, temp_narrativa = 35, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
   public static int reputacaoGrupo = 0;
   public static int danoDoIran = 25;
@@ -1223,7 +1225,7 @@ public class projetoIntegrador {
                         + "\navista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela", TimeUnit.MILLISECONDS, temp_narrativa);
 
         Digita("...", TimeUnit.MILLISECONDS, temp_narrativa);
-        Digita("Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente!\n" +
+        Digita("\nEnxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente!\n" +
                 "Você grita de raiva, uma aura te contorna, você sente um poder ainda mais forte dentro de você!", TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n\n\n\nVocê: AAAAAAAAAAAAAAAAAAAAAAAA EU VOU MATAR VOCÊ!!!\n\n", TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n\nNarrador: No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga."
@@ -1258,7 +1260,7 @@ public class projetoIntegrador {
         Digita(
                 "\nSe passando como paciente você consegue andar livremente pela vila,"
                         + "\nInvestigando o local descobre que aconteceu uma reunião para escolha de um lider.\n"
-                        + "\nE esse líder era seu alvo, visto do Outdoor!\n", TimeUnit.MILLISECONDS, temp_narrativa);
+                        + "\nE esse líder era seu alvo, visto no cartaz colado na parede!\n", TimeUnit.MILLISECONDS, temp_narrativa);
 
         Digita("\nEscuta de moradores locais que haverá uma coroação, vendo assim sua chance de vingança!\n"
                 + "\nPara isso abre sua mochila para verificar se tem os itens necessários.\n", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -1278,10 +1280,110 @@ public class projetoIntegrador {
                 Digita("Não foi isso que eu pedi.", TimeUnit.MILLISECONDS, temp_narrativa);
             }
         }
+        Digita("\n\nNarrador: Ao analizar seu itens na mochila, vece pensa em uma brilhante ideia de vingança."
+        		+ "\nVoce pensa em se infiltrar de baixo do palco e utilizar a lança de zeus para cair um mega raio em em cima de seu inimigo,"
+        		+ "\nCom o coração martelando no peito, você se prepara para o ataque final sob o palco, cada músculo tenso com o ardente desejo de vingança."
+        		+ "\nNo momento crucial, quando tudo está prestes a se desenrolar, a intensidade de suas emoções atinge um ponto de ruptura. O ódio, a dor e "
+        		+ "\no desejo de retribuição se misturam numa tempestade furiosa dentro de você. No frenesi do momento, você ativa o anel dourado, e de repente,"
+        		+ "\no mundo ao seu redor desaparece."
+        		+ "\n\nVocê se encontra em um plano todo em branco, exceto por duas opções diante de você. É como se o universo estivesse lhe oferecendo uma pausa, "
+        		+ "\numa chance de reconsiderar o futuro de todos os jogadores que estão presos no jogo." , TimeUnit.MILLISECONDS, temp_narrativa);
+             Digita("\n\n    |--------------|      |---------------|"
+        		  + "\n    |1. libertar   |      |2. voce tem a  |"
+        		  + "\n    |  a todos os  |      | oportunidade  |"
+        		  + "\n    |  jogadores   |      | de reviver e  |"
+        		  + "\n    |   vivos do   |      |   libertar    |"
+        		  + "\n    |  jogo e lhes |      |  uma pessoa.  |"
+        		  + "\n    | oportunidade |      |(o player que  |"
+        		  + "\n    |  de sairem   |      | voce escolher |"
+        		  + "\n    |   do nosso   |      | devera estar  |"
+        		  + "\n    |     jogo.    |      | morto no jogo)|"
+        		  + "\n    |--------------|      |---------------|\n\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        
+        int escolhaFinal = entrada.nextInt();
+        
+        if (escolhaFinal == 1) {
+        	finalVingancaBom();
+        } else if (escolhaFinal == 2) {
+        	Digita("\nERRO!"
+        			+ "\nERR@!!"
+        			+ "\n3RR0!!!"
+        			+ "\n\n**escolha a opção de novo, descupa pelo erro**"
+        			+ "\n\n    |--------------|      |---------------|"
+        			+ "\n    |1. libertar   |      |2. voce tem a  |"
+        			+ "\n    |  a todos os  |      | oportunidade  |"
+        			+ "\n    |  jogadores   |      | de reviver e  |"
+        			+ "\n    |   vivos do   |      |   libertar    |"
+        			+ "\n    |  jogo e lhes |      |  uma pessoa.  |"
+        			+ "\n    | oportunidade |      |(o player que  |"
+        			+ "\n    |  de sairem   |      | voce escolher |"
+        			+ "\n    |   do nosso   |      | devera estar  |"
+        			+ "\n    |     jogo.    |      | morto no jogo)|"
+        			+ "\n    |--------------|      |---------------|", TimeUnit.MILLISECONDS, temp_narrativa);
+        	
+        	 int escolhaFinal2 = entrada.nextInt();
+        	 
+        	 if (escolhaFinal2 == 1) {
+        		 finalVingancaBom();
+        	 } else if (escolhaFinal2 == 2) {
+        		 Digita("\nERRO CRITICO!"
+             			+ "\n&7RR@ C$1TiC@!!"
+             			+ "\n3R%0 CRItCp@3#!!!"
+             			+ "\n\n**tem certeza que você deseja esta opção??**"
+             			+ "\n\n    |--------------|      |---------------|"
+             			+ "\n    |1. libertar   |      |2. voce tem a  |"
+             			+ "\n    |  a todos os  |      | oportunidade  |"
+             			+ "\n    |  jogadores   |      | de reviver e  |"
+             			+ "\n    |   vivos do   |      |   libertar    |"
+             			+ "\n    |  jogo e lhes |      |  uma pessoa.  |"
+             			+ "\n    | oportunidade |      |(o player que  |"
+             			+ "\n    |  de sairem   |      | voce escolher |"
+             			+ "\n    |   do nosso   |      | devera estar  |"
+             			+ "\n    |     jogo.    |      | morto no jogo)|"
+             			+ "\n    |--------------|      |---------------|", TimeUnit.MILLISECONDS, temp_narrativa);
+        		 int escolhaFinal3 = entrada.nextInt();
+        		 
+        		 if (escolhaFinal3 == 1) {
+        			 finalVingancaBom();
+        		 }else if (escolhaFinal3 == 2) {
+        			 finalVingancaRuim();
+
+        		 }else {
+        			 Digita("eu nao dei essa opção!", TimeUnit.MILLISECONDS, temp_narrativa);
+        			 entrada.close();
+        		 }
+        		 
+        		 
+        	 }else {
+        		 Digita("eu nao dei essa opção!", TimeUnit.MILLISECONDS, temp_narrativa);
+        		 entrada.close();
+        	 }
+        	 
+        	 
+        	 
+        	 
+        	 
+        }else {
+        	Digita("eu nao dei essa opção!", TimeUnit.MILLISECONDS, temp_narrativa);
+        	entrada.close();
+        }
+        
+
     }
 
+  public static void finalVingancaBom() throws Exception {
+	  
+	  
+  }
+  
+ public static void finalVingancaRuim() throws Exception {
+	  
+	  
+  }
 
   public static void voltaDormir() throws Exception {
+	  
+	  
   }
 
   public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
