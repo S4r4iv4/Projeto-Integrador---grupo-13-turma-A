@@ -23,7 +23,7 @@ public class projetoIntegrador {
       System.out.println("\n");
       escolha = entrada.nextInt();
       if (escolha == 1) {
-        buscarVinganca();
+        menu();
       } else if (escolha == 2) {
         Digita("Até a próxima!", TimeUnit.MILLISECONDS, temp_dialog);
       } else {
