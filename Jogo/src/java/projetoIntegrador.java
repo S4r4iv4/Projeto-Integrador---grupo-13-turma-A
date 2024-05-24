@@ -1,11 +1,11 @@
-package pi;
+package cjkwegbc8yavbcua;
 
 import java.io.DataInput;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class projetoIntegrador {
+public class yqqyyqyyqyyqyqyqq {
 	
 	
   static int temp_dialog = 25, temp_narrativa = 35, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
