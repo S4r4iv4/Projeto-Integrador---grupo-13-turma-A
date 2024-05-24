@@ -6,7 +6,7 @@ import java.math.*;
 import java.util.Random;
 
 public class projetoIntegrador {
-  static int temp_dialog = 25, temp_narrativa = 40, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
+  static int temp_dialog = 25, temp_narrativa = 35, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
   public static int reputacaoGrupo = 0;
   public static int danoDoIran = 25;
   public static int vidaDoIran = 100;
@@ -23,7 +23,7 @@ public class projetoIntegrador {
       System.out.println("\n");
       escolha = entrada.nextInt();
       if (escolha == 1) {
-        menu();
+        buscarVinganca();
       } else if (escolha == 2) {
         Digita("Até a próxima!", TimeUnit.MILLISECONDS, temp_dialog);
       } else {
@@ -151,7 +151,7 @@ public class projetoIntegrador {
   static void creditos() throws Exception {
     Scanner entrada = new Scanner(System.in);
     int escolha_creditos;
-    Digita("\nCréditos: Jogo criado por Vini.", TimeUnit.MILLISECONDS, temp_dialog);// creditos provisorios
+    Digita("\nCréditos: Jogo criado por Gabriel Rodrigues\nJoão Victor Lopes\nLeonardo Dudalski\nVinicius Saraiva.", TimeUnit.MILLISECONDS, temp_dialog);// creditos provisorios
     Digita("\n*1. Voltar ao menu", TimeUnit.MILLISECONDS, temp_dialog);
     System.out.println("\n");
     escolha_creditos = entrada.nextInt();
@@ -205,19 +205,19 @@ public class projetoIntegrador {
         Digita("\nNarrador: Você compra o jogo.",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
-        Digita(nome_amiga + "\n: Boaa, agora, vamos jogar!!",
+        Digita("\n\n"+ nome_amiga + ": Boaa, agora, vamos jogar!!",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
-        Digita("Narrador: Você vai para casa e conecta no jogo com sua amiga.",
+        Digita("\n\nNarrador: Você vai para casa e conecta no jogo com sua amiga.",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
       } else if (escolha_loja == 2) {
         Digita("\n\nNarrador: Você vai pra casa e vai dormir.",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
-        Digita("\nGAME OVER", TimeUnit.MILLISECONDS,
+        Digita("\n\nGAME OVER", TimeUnit.MILLISECONDS,
             temp_narrativa);
-        Digita("\nFinal 1: Ta duro, dorme!",
+        Digita("\n\nFinal 1: Ta duro, dorme!",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
         System.exit(0);
@@ -227,17 +227,17 @@ public class projetoIntegrador {
             temp_narrativa);
       }
     } while (escolha_loja != 1 && escolha_loja != 2);
-    Digita("\nNarrador: Ao conectar no jogo, você sente uma dor estranha, mas não liga muito.",
+    Digita("\n\nNarrador: Ao conectar no jogo, você sente uma dor estranha, mas não liga muito.",
         TimeUnit.MILLISECONDS,
         temp_narrativa);
-    Digita("\nNarrador: No lobby no jogo, vc escuta uma voz familiar...",
+    Digita("\n\nNarrador: No lobby no jogo, vc escuta uma voz familiar...",
         TimeUnit.MILLISECONDS,
         temp_narrativa);
-    Digita("\n" + nome_amiga
+    Digita("\n\n" + nome_amiga
         + ": Ai, vc tbm sentiu aquilo? Doeu um pouco, mas deve ser o jogo calibrando né?",
         TimeUnit.MILLISECONDS,
         temp_narrativa);
-    Digita("\n" + nome_amiga + ": Caraca, olha esses gráficos! Parece mesmo a vida real!",
+    Digita("\n\n" + nome_amiga + ": Caraca, olha esses gráficos! Parece mesmo a vida real!",
         TimeUnit.MILLISECONDS,
         temp_narrativa);
     Digita("\n\n" + nome_amiga
@@ -342,50 +342,50 @@ public class projetoIntegrador {
             x = entrada.nextInt();
             if (x == (-2)) {
               Digita(
-                  "Narrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você guarda no inventário.",
+                  "\n\nNarrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você guarda no inventário.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             } else if (x != (-2)) {
-              Digita("Narrador: Não é bem isso, mas tente novamente.",
+              Digita("\n\nNarrador: Não é bem isso, mas tente novamente.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             } else {
-              Digita("Narrador: Resposta inválida.",
+              Digita("\n\nNarrador: Resposta inválida.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             }
           } while (x != (-2));
         } else if (escolha1 == 2) {
-          Digita("Narrador: ao pressionar a tela, aparece uma equação estranha: 10x - 100 = 1000",
+          Digita("\n\nNarrador: ao pressionar a tela, aparece uma equação estranha: 10x - 100 = 1000",
               TimeUnit.MILLISECONDS,
               temp_narrativa);
           int x;
           do {
-            Digita("Narrador: você chega a conclusão de que x é igual a... ",
+            Digita("\n\nNarrador: você chega a conclusão de que x é igual a... ",
                 TimeUnit.MILLISECONDS,
                 temp_narrativa);
             x = entrada.nextInt();
             if (x == 110) {
               Digita(
-                  "Narrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você usa para curar sua amiga.",
+                  "\n\nNarrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você usa para curar sua amiga.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
-              Digita("Narrador: Sua amiga está melhorando devagar, mas continua inconsciente.",
+              Digita("\n\nNarrador: Sua amiga está melhorando devagar, mas continua inconsciente.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             } else if (x != 110) {
-              Digita("Narrador: Não é bem isso, mas tente novamente.",
+              Digita("\n\nNarrador: Não é bem isso, mas tente novamente.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             } else {
-              Digita("Narrador: Resposta inválida.",
+              Digita("\n\nNarrador: Resposta inválida.",
                   TimeUnit.MILLISECONDS,
                   temp_narrativa);
             }
           } while (x != 110);
         }
       } else if (escolha2 == 2) {
-        Digita("Narrador: Você decide não descriptografar o código e continua a ajudar sua amiga, mas sem sucesso.",
+        Digita("\n\nNarrador: Você decide não descriptografar o código e continua a ajudar sua amiga, mas sem sucesso.",
             TimeUnit.MILLISECONDS,
             temp_narrativa);
       }
@@ -644,7 +644,7 @@ public class projetoIntegrador {
           reputacaoGrupo++;
           reputacaoGrupo++;
           Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
-          Digita(": Isso prarece ótimo! Vamos treinar e compartilhar informações para ficarmos muito melhores juntos!",
+          Digita(": Isso paarece ótimo! Vamos treinar e compartilhar informações para ficarmos muito melhores juntos!",
               TimeUnit.MILLISECONDS, temp_narrativa);
 
           capitulo2_2();
@@ -697,7 +697,7 @@ public class projetoIntegrador {
               reputacaoGrupo++;
               Digita("\n" + perso2, TimeUnit.MILLISECONDS, temp_narrativa);
               Digita(
-                  ": Isso prarece ótimo! Vamos treinar e compartilhar informações para ficarmos muito melhores juntos!",
+                  ": Isso parece ótimo! Vamos treinar e compartilhar informações para ficarmos muito melhores juntos!",
                   TimeUnit.MILLISECONDS, temp_narrativa);
               capitulo2_2();
 
@@ -1015,14 +1015,18 @@ public class projetoIntegrador {
     String perso4 = "manéu gomes";
 
     double vidaJogador = vidaDoIran;
-    int vidaInimigo = 1000;
+    int vidaInimigo = 100;
 
     while (vidaJogador > 0 && vidaInimigo > 0) {
       Digita("\n\nEscolha uma ação:" + "\n1. Atacar" + "\n2. Atacar com golpe crítico" + "\nSua escolha: ",
           TimeUnit.MILLISECONDS, temp_narrativa);
 
       int escolha = sc.nextInt();
+      if (escolha == 200){
 
+        Digita("\n\nVoce deu um 200!!!! full box, quase vomitei, vem x1 seu random, e seu inimigo morreu de cringe!", TimeUnit.MILLISECONDS, temp_narrativa);
+        capitulo2_4();
+    }
       double danoJogador = calcularDano(escolha == 2);
 
       if (danoJogador == 0) {
@@ -1124,7 +1128,7 @@ public class projetoIntegrador {
         "\nChegando lá, você entra na floresta, entre as árvores, e se depara com alguém, com um MACHADO CRAVADO NA CABEÇA, clamando por ajuda!"
             + "\nÀ medida que se aproxima, percebe que é Alice, chorando convulsivamente e suplicando por socorro."
             + "\n" + "\n(1) Fica calma, Alice. Estou aqui para ajudar."
-            + "\n(2) Como diabos você veio parar aqui, Alice? Isso não pode ser real.",
+            + "\n(2) Como diabos você veio parar aqui, Alice? Isso não pode ser real.\n",
         TimeUnit.MILLISECONDS,
         temp_narrativa);
     int pesadelo = sc.nextInt();
@@ -1165,7 +1169,7 @@ public class projetoIntegrador {
     Digita("\n\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
     Digita(
         "\n(1). BUSCAR VINGANÇA, ao buscar vingança seu corpo imerge em uma raiva imutável, inconscientemente, você mata todos que estão no chalé pra pegar mais poder e ir buscar sua vingança."
-            + "\n(2). voltar a dormir, ao voltar a dormir você ignora todos aqules sentimentos de raiva e ódio, você da mais valor ao seu grupo de amigos e aceita essa nova vida.",
+            + "\n(2). voltar a dormir, ao voltar a dormir você ignora todos aqules sentimentos de raiva e ódio, você da mais valor ao seu grupo de amigos e aceita essa nova vida.\n",
         TimeUnit.MILLISECONDS, temp_narrativa);
     int escolha_final = sc.nextInt();
 
@@ -1191,93 +1195,91 @@ public class projetoIntegrador {
     Scanner entrada = new Scanner(System.in);
 
     Digita("\nNarrador: Após uma chacina no chalé, você retoma sua consciência e fica desesperado com tudo aquilo,\n"
-        + "Não acreditando que fosse capaz de tamanha brutalidade e explosão de força.\n"
-        + " Decide então, seguir mesmo assim e tentar concertar seus erros e não ser apenas mais um player incapaz de controlar seu poder!",
-        TimeUnit.MILLISECONDS, temp_narrativa);
+                + "Não acreditando que fosse capaz de tamanha brutalidade e explosão de força.\n"
+                + "Decide então, seguir mesmo assim e tentar concertar seus erros e não ser apenas mais um player incapaz de controlar seu poder!", TimeUnit.MILLISECONDS, temp_narrativa);
 
-    Digita("...", TimeUnit.MILLISECONDS, temp_segundo);
-    Digita(
-        "\n(1). Saquear todos seus amigos que você matou para tentar adquirir recursos que fossem importantes para sua vingança. "
-            + "\n(2). Ir sem mexer em nada totalmente arrependido pelo que fez e com sentimento de culpa\n",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    int escolha_saque = entrada.nextInt();
-    while (escolha_saque != 1 && escolha_saque != 2) {
-      if (escolha_saque == 1) {
+        Digita("...", TimeUnit.MILLISECONDS, temp_drama);
         Digita(
-            "Você encontra alguns itens de primeiro socorros,uma lança cujo nome era Lança de Zeus,e um anel dourado\n com um simbolo de porção e não entende muito o que é, mas mesmo assim coloca no dedo por achar que é valioso",
-            TimeUnit.MILLISECONDS, temp_dialog);
-      } else if (escolha_saque == 2) {
-        Digita(" Apenas vai em busca do seu objetivo!", TimeUnit.MILLISECONDS, temp_narrativa);
-      } else {
-        Digita("Eu não dei essa opcao!", TimeUnit.MILLISECONDS, temp_narrativa);
-        entrada.close();
-      }
+                "\n(1)Saquear todos seus amigos que você matou para tentar adquirir recursos que fossem importantes para sua vingança. "
+                        + "\n(2)Ir sem mexer em nada totalmente arrependido pelo que fez e com sentimento de culpa.\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        int escolha_saque = entrada.nextInt();
+        do {
+            if (escolha_saque == 1) {
+                Digita(
+                        "\n\nNarrador: Você encontra alguns itens de primeiro socorros,uma lança cujo nome era Lança de Zeus,"
+                                +
+                                "\ne um anel dourado com um simbolo de porção e não entende muito o que é, "
+                                + " mas mesmo assim coloca no dedo por achar que é valioso.\n", TimeUnit.MILLISECONDS, temp_narrativa);
+            } else if (escolha_saque == 2) {
+                Digita(" Apenas vai em busca do seu objetivo", TimeUnit.MILLISECONDS, temp_narrativa);
+            } else {
+                Digita("Eu não dei essa opcao", TimeUnit.MILLISECONDS, temp_narrativa);
+                entrada.close();
+            }
 
-    }
-    Digita(
-        "Ao sair do chalé, você segue a caminho por uma trilha da floresta,\napós essa trilha se depara com uma estrada abandonada na qual,\n avista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela ",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("...", TimeUnit.MILLISECONDS, temp_drama);
-    Digita(
-        "Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente\n" +
-            "Você grita de raiva uma aura te contorna você sente um poder ainda mais forte dentro de você",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("\n\n\n\nAAAAAAAAAAAAAAAAAAAAAAAA EU VOU MATAR VOCÊ", TimeUnit.MILLISECONDS, temp_dialog);
-    Digita(
-        "No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga.\n Avista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\n mas você está destinado a efetuar sua vingança. Você: ",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("\n(1). Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. "
-        + "\n(2). Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    int escolha_estrada = entrada.nextInt();
-    do {
-      if (escolha_estrada == 1) {
-        Digita("No último momento arrastando toda a poeira a caminhote para frente a você\\n" + //
-            "No meio de toda poeira arrastada, a porta se abre e você, desesperado apenas entra pela porta buscando uma carona,\\n"
-            + //
-            "Você senta no banco e olha para ao lado enquanto o condutor desconhecido apenas dirige pela estrada vazia. ",
-            TimeUnit.MILLISECONDS, temp_narrativa);
-      } else if (escolha_estrada == 2) {
-        Digita("Você decide ir andando ao encontro dos seus alvos...\\n" + //
-            " correndo  na floresta, após escapar do acidente, se depara com uma alcateia de lobos Cybernéticos Assasinos...\\n"
-            + //
-            "e apenas sua vontade de vingança não são suficientes.\\n" + //
-            " Você morreu!", TimeUnit.MILLISECONDS, temp_narrativa);
-        entrada.close();
-      } else {
-        Digita(" Eu não te dei essa opção! ", TimeUnit.MILLISECONDS, temp_narrativa);
-      }
-    } while (escolha_estrada != 1);
-    Digita(
-        "\nVocê não sabe para onde está indo, o motorista apenas dirige pela estrada sem fim...\nele entra num atalho e você começa a avistar uma grande vila, e acaba reconhecendo alguns dos vigias.\nO motorista desconhecido tinha acesso a essa área. Você está mais perto do que imagina do seu alvo!",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita(
-        "\nO motorista te deixa perto de um ferreiro,\n a primeira coisa que você é pegar uma espada super quente e deferir contra sua perna,\n fazendo assim você ser socorrido por médicos locais e infiltrar a base. ",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita(
-        "\nSe passando como paciente você consegue andar livremente pela vila, \nInvestigando o local descobre que aconteceu uma reunião para escolha de um lider.\nE esse líder era seu alvo, visto do Outdoor!",
-        TimeUnit.MILLISECONDS, temp_narrativa);
-    Digita("\nEscuta de moradores locais que haverá uma coroação, vendo assim sua chance de vingança!"
-        + "\nPara isso abre sua mochila para verificar se tem os itens necessários.\n", TimeUnit.MILLISECONDS,
-        temp_narrativa);
+        } while (escolha_saque != 1 && escolha_saque != 2);
+        Digita(
+                "\n\nNarrador: Ao sair do chalé, você segue a caminho por uma trilha da floresta,\napós essa trilha se depara com uma estrada abandonada na qual,"
+                        + "\navista um Outdoor apresentando os melhores players do jogo e quando você olha apenas congela", TimeUnit.MILLISECONDS, temp_narrativa);
 
-    Digita("Tecle E para ver a mochila: ");
+        Digita("...", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("Enxerga aquele ... que acabou com a vida da sua melhor amiga na sua frente!\n" +
+                "Você grita de raiva, uma aura te contorna, você sente um poder ainda mais forte dentro de você!", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\n\n\n\nVocê: AAAAAAAAAAAAAAAAAAAAAAAA EU VOU MATAR VOCÊ!!!\n\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\n\nNarrador: No mesmo momento busca uma forma de encontrar o grupo cruel que um dia cruzou o seu caminho e você se sentiu imponente de proteger sua amiga."
+                + "\nAvista chegando pela estrada abandona uma caminhote buzinando para você sair da rua,\nmas você está destinado a efetuar sua vingança. Você: ", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("\n(1)Fica na frente da caminhote e espera que ele pare, te dando assim uma carona. "
+                + "\n(2)Corre da estrada e vê a caminhote ir embora e terá que ir a pé encontrar os assasinos da sua amiga.\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        int escolha_estrada = entrada.nextInt();
+        do {
+            if (escolha_estrada == 1) {
+                Digita("\n\nNarrador: No último momento arrastando toda a poeira da caminhote para frente a você,\n" + //
+                        "No meio de toda poeira arrastada, a porta se abre e você, desesperado apenas entra pela porta buscando uma carona,\n"
+                        + "Você senta no banco e olha para ao lado enquanto o condutor desconhecido apenas dirige pela estrada vazia. ", TimeUnit.MILLISECONDS, temp_narrativa);
+            } else if (escolha_estrada == 2) {
+                Digita("Você decide ir andando ao encontro dos seus alvos...\\n" + //
+                        " correndo  na floresta, após escapar do acidente, se depara com uma alcateia de lobos Cybernéticos Assasinos...\\n"
+                        + //
+                        "e apenas sua vontade de vingança não são suficientes.\\n" + //
+                        " Você morreu", TimeUnit.MILLISECONDS, temp_narrativa);
+                entrada.close();
+            } else {
+                Digita(" Eu não te dei essa opção!", TimeUnit.MILLISECONDS, temp_narrativa);
+            }
+        } while (escolha_estrada != 1);
+        Digita(
+                "\n\nNarrador: Você não sabe para onde está indo, o motorista apenas dirige pela estrada sem fim..."
+                        + "\nele entra num atalho e você começa a avistar uma grande vila, e acaba reconhecendo alguns dos vigias.\nO motorista desconhecido tinha acesso a essa área. Você está mais perto do que imagina do seu alvo!\n", TimeUnit.MILLISECONDS, temp_narrativa);
 
-    String[] mochila = { "Anel Dourado", "Kit de Primeiros socorros", "Lança de Zeus" };
+        Digita(
+                "\n\nNarrador:Você é deixado perto de um ferreiro,\na primeira coisa que você faz, é pegar uma espada super quente e deferir contra sua perna,"
+                        + "\nfazendo assim você ser socorrido por médicos locais e infiltrar a base. ", TimeUnit.MILLISECONDS, temp_narrativa);
 
-    String input = "";
-    while (!input.equalsIgnoreCase("E")) {
-      input = entrada.nextLine();
-      if (input.equalsIgnoreCase("E")) {
-        Digita("Itens na mochila:");
-        for (String item : mochila) {
-          Digita(" - " + item);
+        Digita(
+                "\nSe passando como paciente você consegue andar livremente pela vila,"
+                        + "\nInvestigando o local descobre que aconteceu uma reunião para escolha de um lider.\n"
+                        + "\nE esse líder era seu alvo, visto do Outdoor!\n", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Digita("\nEscuta de moradores locais que haverá uma coroação, vendo assim sua chance de vingança!\n"
+                + "\nPara isso abre sua mochila para verificar se tem os itens necessários.\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        Digita("Tecle E para ver a mochila: ", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        String[] mochila = { "Anel Dourado", "Kit de Primeiros socorros", "Lança de Zeus" };
+
+        String input = "";
+        while (!input.equalsIgnoreCase("E")) {
+            input = entrada.nextLine();
+            if (input.equalsIgnoreCase("E")) {
+                Digita("Itens na mochila:", TimeUnit.MILLISECONDS, temp_narrativa);
+                for (String item : mochila) {
+                    Digita(" - " + item, TimeUnit.MILLISECONDS, temp_narrativa);
+                }
+            } else if (!input.equalsIgnoreCase(input)) {
+                Digita("Não foi isso que eu pedi.", TimeUnit.MILLISECONDS, temp_narrativa);
+            }
         }
-      } else if (!input.equalsIgnoreCase(input)) {
-        Digita("Não foi isso que eu pedi.");
-      }
     }
-  }
+
 
   public static void voltaDormir() throws Exception {
   }
@@ -1291,7 +1293,3 @@ public class projetoIntegrador {
   }
 }
 
-// *digita '1 ' libertar todos jogadores vivos do jogo// digita '2' ressar
-// alguem morto -- u2 vezea exibe mensagem de erro, 3 vez mostra erro critico e
-// pergunta se tem certeza dessa opçao induzindo a clicar na 1, se 2 for
-// escolhido morre e volta do começo */
