@@ -10,7 +10,7 @@ public class projetoIntegrador {
 	
   static int temp_dialog = 25, temp_narrativa = 35, temp_transicao = 70, temp_segundo = 1000, temp_drama = 2222;
   public static int reputacaoGrupo = 0;
-  public static int danoDoIran = 25;
+  public static int danoDoIran = 48;
   public static int vidaDoIran = 100;
 
   public static void main(String[] args) throws Exception {
@@ -25,7 +25,7 @@ public class projetoIntegrador {
       System.out.println("\n");
       escolha = entrada.nextInt();
       if (escolha == 1) {
-        menu();
+        buscarVinganca();
       } else if (escolha == 2) {
         Digita("Até a próxima!", TimeUnit.MILLISECONDS, temp_dialog);
       } else {
@@ -308,90 +308,7 @@ public class projetoIntegrador {
             temp_narrativa);
       }
     } while (escolha1 != 1 && escolha1 != 2);
-    Digita("\n\nNarrador: Na casa, você encontra um kit, mas, está criptografado por um código estranho. Você: ",
-        TimeUnit.MILLISECONDS,
-        temp_narrativa);
-    Digita("\n\n(1) Tenta descriptografar o código. \n(2) Deixa pra la.",
-        TimeUnit.MILLISECONDS,
-        temp_narrativa);
-    System.out.println("\n");
-    int escolha2 = entrada.nextInt();
-    do {
-      if (escolha2 == 1) {
-        if (escolha1 == 1) {
-          Digita("Iran: " + nome_amiga + ", vamos ver o que tem aqui.",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          Digita("Narrador: Ao encostar na caixa, você se deparacom uma estranha conta matemática: ",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          Digita(nome_amiga
-              + ": Parece uma equação de primeiro grau! Vamos resolver e ver o que tem nela!",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          Digita("\n\nNarrador: Ao pressionar a tela da caixa, uma equação aparece na tela: 5x +1 = -9 ",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          Digita("\n\n" + nome_amiga
-              + ": Essa é a equação? Eu sei que o 1 passa para o outro lado! Fica 5x = -10, mas não sei o resto :P",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          int x;
-          do {
-            Digita("\n\nNarrador: Então, você chega a conclusão que x é igual a... ",
-                TimeUnit.MILLISECONDS,
-                temp_narrativa);
-            x = entrada.nextInt();
-            if (x == (-2)) {
-              Digita(
-                  "\n\nNarrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você guarda no inventário.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            } else if (x != (-2)) {
-              Digita("\n\nNarrador: Não é bem isso, mas tente novamente.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            } else {
-              Digita("\n\nNarrador: Resposta inválida.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            }
-          } while (x != (-2));
-        } else if (escolha1 == 2) {
-          Digita("\n\nNarrador: ao pressionar a tela, aparece uma equação estranha: 10x - 100 = 1000",
-              TimeUnit.MILLISECONDS,
-              temp_narrativa);
-          int x;
-          do {
-            Digita("\n\nNarrador: você chega a conclusão de que x é igual a... ",
-                TimeUnit.MILLISECONDS,
-                temp_narrativa);
-            x = entrada.nextInt();
-            if (x == 110) {
-              Digita(
-                  "\n\nNarrador: Parabéns, você acertou! A caixa se abre e revela um kit de primeiros socorros, e você usa para curar sua amiga.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-              Digita("\n\nNarrador: Sua amiga está melhorando devagar, mas continua inconsciente.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            } else if (x != 110) {
-              Digita("\n\nNarrador: Não é bem isso, mas tente novamente.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            } else {
-              Digita("\n\nNarrador: Resposta inválida.",
-                  TimeUnit.MILLISECONDS,
-                  temp_narrativa);
-            }
-          } while (x != 110);
-        }
-      } else if (escolha2 == 2) {
-        Digita("\n\nNarrador: Você decide não descriptografar o código e continua a ajudar sua amiga, mas sem sucesso.",
-            TimeUnit.MILLISECONDS,
-            temp_narrativa);
-      }
-    } while (escolha2 != 1 && escolha2 != 2);
+    
     Digita(
         "\n\nNarrador: Ao passar do tempo, os gritos e barulhos do caos da cidade vão diminuindo, mas você escuta uma batida na porta.",
         TimeUnit.MILLISECONDS,
@@ -513,7 +430,7 @@ public class projetoIntegrador {
 
       int pontos = 0;
       int perguntasFeitas = 0;
-      int limitePerguntas = 20;
+      int limitePerguntas = 5;
 
       if (escolha == 1) {
         Digita("\n\nVocê escolheu ataques de Multiplicação!", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -529,7 +446,7 @@ public class projetoIntegrador {
       Digita("\nVocê terá que responder a " + limitePerguntas + " perguntas para alcançar seu objetivo.\n",
           TimeUnit.MILLISECONDS, temp_narrativa);
 
-      while (pontos < 100 && perguntasFeitas < limitePerguntas) {
+      while (pontos < 30 && perguntasFeitas < limitePerguntas) {
         int numero1 = (int) (Math.random() * 15) + 3; // 3 a 18
         int numero2 = (int) (Math.random() * 15) + 3; // 3 a 18
 
@@ -544,9 +461,9 @@ public class projetoIntegrador {
             pontos += 10;
           } else {
 
-            Digita("\nResposta incorreta! O inimigo te causou 5 pontos de dano.", TimeUnit.MILLISECONDS,
+            Digita("\nResposta incorreta! O inimigo te causou dano.", TimeUnit.MILLISECONDS,
                 temp_narrativa);
-            pontos -= 5;
+            
           }
         } else if (escolha == 2) { // ÷ divi
           int resultado = numero1 * numero2;
@@ -561,10 +478,10 @@ public class projetoIntegrador {
             pontos += 10;
           } else {
 
-            Digita("\nResposta incorreta! O inimigo te causou 5 pontos de dano.", TimeUnit.MILLISECONDS,
+            Digita("\nResposta incorreta! O inimigo te causou dano.", TimeUnit.MILLISECONDS,
                 temp_narrativa);
 
-            pontos -= 5;
+            
           }
         }
 
@@ -768,7 +685,7 @@ public class projetoIntegrador {
             TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n\n*********************" + "\nDANO AUMENTADO EM 30%" + "\n*********************\n",
             TimeUnit.MILLISECONDS, temp_narrativa);
-        danoDoIran = 33;
+        danoDoIran = 62;
 
         Digita("\nAgora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
@@ -803,7 +720,7 @@ public class projetoIntegrador {
             + "\npara nos ajudar em nossas batalhas!", TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n\n*********************" + "\nDANO AUMENTADO EM 20%" + "\n*********************\n",
             TimeUnit.MILLISECONDS, temp_narrativa);
-        danoDoIran = 30;
+        danoDoIran = 58;
         Digita("\n" + perso3 + ": Agora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS,
             temp_narrativa);
         Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
@@ -838,7 +755,7 @@ public class projetoIntegrador {
             + "\npara nos ajudar em nossas batalhas!", TimeUnit.MILLISECONDS, temp_narrativa);
         Digita("\n\n*********************" + "\nDANO AUMENTADO EM 10%" + "\n*********************\n",
             TimeUnit.MILLISECONDS, temp_narrativa);
-        danoDoIran = 28;
+        danoDoIran = 54;
         Digita("\n" + perso3 + ": Agora, pegue essa folha e clique em treinar!", TimeUnit.MILLISECONDS,
             temp_narrativa);
         Digita("\n1. ~~~~~~~~~~~~~~~" + "\n   |   treinar   |" + "\n   ~~~~~~~~~~~~~~~", TimeUnit.MILLISECONDS,
@@ -875,7 +792,7 @@ public class projetoIntegrador {
 
         if (opcaoTreino == 1) {
           treino();
-        } else if (opcaoTreino == 44) {
+        } else if (opcaoTreino == 69) {
           capitulo2_3();
         } else {
           System.out.println("nao existe essa opcao");
@@ -909,7 +826,7 @@ public class projetoIntegrador {
 
       int pontos = 0;
       int perguntasFeitas = 0;
-      int limitePerguntas = 15;
+      int limitePerguntas = 5;
 
       if (escolha == 1) {
         Digita("\n\nVocê escolheu a área de Multiplicação!", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -925,7 +842,7 @@ public class projetoIntegrador {
       Digita("\nVocê terá que responder a " + limitePerguntas + " perguntas para alcançar seu objetivo.\n",
           TimeUnit.MILLISECONDS, temp_narrativa);
 
-      while (pontos < 100 && perguntasFeitas < limitePerguntas) {
+      while (pontos < 30 && perguntasFeitas < limitePerguntas) {
         int numero1 = (int) (Math.random() * 15) + 3; // 3 a 18
         int numero2 = (int) (Math.random() * 15) + 3; // 3 a 18
 
@@ -939,8 +856,8 @@ public class projetoIntegrador {
             pontos += 10;
           } else {
 
-            Digita("\nResposta incorreta! Você perdeu 5 pontos.", TimeUnit.MILLISECONDS, temp_narrativa);
-            pontos -= 5;
+            Digita("\nResposta incorreta! Você não ganhou nenhum ponto.", TimeUnit.MILLISECONDS, temp_narrativa);
+            
           }
         } else if (escolha == 2) { // ÷ divi
           int resultado = numero1 * numero2;
@@ -954,9 +871,9 @@ public class projetoIntegrador {
             pontos += 10;
           } else {
 
-            Digita("\nResposta incorreta! Você perdeu 5 pontos.", TimeUnit.MILLISECONDS, temp_narrativa);
+            Digita("\nResposta incorreta! Você não ganhou nenhum ponto.", TimeUnit.MILLISECONDS, temp_narrativa);
 
-            pontos -= 5;
+            
           }
         }
 
@@ -965,7 +882,7 @@ public class projetoIntegrador {
 
       }
 
-      if (pontos >= 100) {
+      if (pontos >= 30) {
         Digita("\nParabéns! Você concluiu seu treinamento!", TimeUnit.MILLISECONDS, temp_narrativa);
 
       } else {
@@ -1039,7 +956,7 @@ public class projetoIntegrador {
       }
       vidaInimigo -= danoJogador;
 
-      int danoInimigo = 18;
+      int danoInimigo = 30;
       vidaJogador -= danoInimigo;
       Digita("\nO inimigo atacou você e causou " + danoInimigo + " de dano." + "\n\nVida atual: " + "\nVocê: "
           + vidaJogador + "\nInimigo: " + vidaInimigo, TimeUnit.MILLISECONDS, temp_narrativa);
