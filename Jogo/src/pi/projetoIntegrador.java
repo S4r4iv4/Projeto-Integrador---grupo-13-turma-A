@@ -1205,17 +1205,23 @@ public class projetoIntegrador {
         		+ "\no mundo ao seu redor desaparece."
         		+ "\n\nVocê se encontra em um plano todo em branco, exceto por duas opções diante de você. É como se o universo estivesse lhe oferecendo uma pausa, "
         		+ "\numa chance de reconsiderar o futuro de todos os jogadores que estão presos no jogo." , TimeUnit.MILLISECONDS, temp_narrativa);
-             Digita("\n\n    |--------------|      |---------------|"
+             System.out.println("\n\n    |--------------|      |---------------|"
         		  + "\n    |1. libertar   |      |2. voce tem a  |"
         		  + "\n    |  a todos os  |      | oportunidade  |"
         		  + "\n    |  jogadores   |      | de reviver e  |"
         		  + "\n    |   vivos do   |      |   libertar    |"
-        		  + "\n    |  jogo e lhes |      |  uma pessoa.  |"
+        		  + "\n    |  jogo e dar  |      |  uma pessoa.  |"
         		  + "\n    | oportunidade |      |(o player que  |"
         		  + "\n    |  de sairem   |      | voce escolher |"
         		  + "\n    |   do nosso   |      | devera estar  |"
         		  + "\n    |     jogo.    |      | morto no jogo)|"
-        		  + "\n    |--------------|      |---------------|\n\n", TimeUnit.MILLISECONDS, temp_narrativa);
+        		  + "\n    |--------------|      |---------------|\n\n");
+             
+             Digita("Narrador: Ao ler as duas perguntas, você entra em uma constante dúvida", TimeUnit.MILLISECONDS, temp_narrativa);
+             Digita(".....", TimeUnit.MILLISECONDS, temp_drama);
+             Digita("\n\nSua logica é: 'Se eu escolher a primeira opção, estarei salvando a vida até mesmo daquele que mataram minha melhor amiga..."
+            	+	 "\nNo entanto, também não vejo apenas os lados negativos da primeira opção. Se eu escolher a segunda opção e reviver Alice, estarei eternizando a vida de todos os jogadores dentro do jogo, \naté mesmo a minha..."
+            	+ "\nNarrador: Mesmo indeciso, você toma uma decisão >>>\n\n", TimeUnit.MILLISECONDS, temp_narrativa);
         
         int escolhaFinal = entrada.nextInt();
         
@@ -1225,18 +1231,18 @@ public class projetoIntegrador {
         	Digita("\nERRO!"
         			+ "\nERR@!!"
         			+ "\n3RR0!!!"
-        			+ "\n\n**escolha a opção de novo, descupa pelo erro**"
-        			+ "\n\n    |--------------|      |---------------|"
+        			+ "\n\n**escolha a opção de novo, descupa pelo erro**", TimeUnit.MILLISECONDS, temp_narrativa);
+        			System.out.println("\n\n    |--------------|      |---------------|"
         			+ "\n    |1. libertar   |      |2. voce tem a  |"
         			+ "\n    |  a todos os  |      | oportunidade  |"
         			+ "\n    |  jogadores   |      | de reviver e  |"
         			+ "\n    |   vivos do   |      |   libertar    |"
-        			+ "\n    |  jogo e lhes |      |  uma pessoa.  |"
+        			+ "\n    |  jogo e dar  |      |  uma pessoa.  |"
         			+ "\n    | oportunidade |      |(o player que  |"
         			+ "\n    |  de sairem   |      | voce escolher |"
         			+ "\n    |   do nosso   |      | devera estar  |"
         			+ "\n    |     jogo.    |      | morto no jogo)|"
-        			+ "\n    |--------------|      |---------------|", TimeUnit.MILLISECONDS, temp_narrativa);
+        			+ "\n    |--------------|      |---------------|");
         	
         	 int escolhaFinal2 = entrada.nextInt();
         	 
@@ -1247,17 +1253,18 @@ public class projetoIntegrador {
              			+ "\n&7RR@ C$1TiC@!!"
              			+ "\n3R%0 CRItCp@3#!!!"
              			+ "\n\n**tem certeza que você deseja esta opção??**"
-             			+ "\n\n    |--------------|      |---------------|"
+             			+ "\nN@RrDoR5rR: 0 Qu33 È i5s0#$??*", TimeUnit.MILLISECONDS, temp_narrativa);
+             			System.out.println("\n\n    |--------------|      |---------------|"
              			+ "\n    |1. libertar   |      |2. voce tem a  |"
              			+ "\n    |  a todos os  |      | oportunidade  |"
              			+ "\n    |  jogadores   |      | de reviver e  |"
              			+ "\n    |   vivos do   |      |   libertar    |"
-             			+ "\n    |  jogo e lhes |      |  uma pessoa.  |"
+             			+ "\n    |  jogo e dar  |      |  uma pessoa.  |"
              			+ "\n    | oportunidade |      |(o player que  |"
              			+ "\n    |  de sairem   |      | voce escolher |"
              			+ "\n    |   do nosso   |      | devera estar  |"
              			+ "\n    |     jogo.    |      | morto no jogo)|"
-             			+ "\n    |--------------|      |---------------|", TimeUnit.MILLISECONDS, temp_narrativa);
+             			+ "\n    |--------------|      |---------------|");
         		 int escolhaFinal3 = entrada.nextInt();
         		 
         		 if (escolhaFinal3 == 1) {
@@ -1290,14 +1297,32 @@ public class projetoIntegrador {
 
   public static void finalVingancaBom() throws Exception {
 	  
-	  
+	  Digita("Ao libertar todos os outros jogadores do jogo, um abismo de culpa se abre em sua alma pela ausência de Alice.  Imóvel, paralisado pelo choque e pela dor lancinante, "
+	  		+ "\no mundo ao seu redor parece desvanecer em uma neblina de remorso e pesar. Ao ouvir o toque insistente do celular, um lampejo de esperança se irrompe. Lentamente, "
+	  		+ "\nos olhos se voltam para o dispositivo, e uma mistura de choque e incredulidade se instala quando o nome \"Alice\" ilumina a tela."
+	  		+ "\n\nO coração dispara com a revelação de que sua amiga está viva, e as palavras fluem em um frenesi de confusão e alívio enquanto vocês se reconectam. Alice relata "
+	  		+ "\nsua terrivel experiencia mantida em cativeiro cativeiro e conta que o grupo de player nao tinha matado ela naquela tarde, enquanto você compartilha sua jornada no "
+	  		+ "\nmundo virtual, marcada por escolhas impossíveis e consequências devastadoras."
+	  		+ "\nCom a verdade revelada e os laços de amizade fortalecidos pela provação, vocês prometem nunca mais jogarem qualquer outro tipo de jogo em realidade virtual.", TimeUnit.MILLISECONDS, temp_segundo);
   }
   
  public static void finalVingancaRuim() throws Exception {
 	  
-	  
+	 
+	 Digita("O destino se desvenda em um terrível colapso de erros. Uma escolha equivocada desencadeou uma cadeia de eventos sombrios. Os erros, como um enxame voraz, "
+	 		+ "\ndevoram não só o anel de poder, mas também a sua própria essência vital, transformando carne e osso em linhas de código distorcidas. Cada instante é uma batalha"
+	 		+ "\ndesesperada contra a inevitável escuridão que se avizinha, enquanto a respiração se torna um luxo perdido, e a esperança, um eco distante na vastidão do desespero."
+	 		+ "\nAté chegar ao ponto em que você não consegue mais puxar o ar para respirar. Cada tentativa desesperada de encher os pulmões é um mergulho mais profundo na vastidão "
+	 		+ "\nsufocante do desconhecido."
+	 		+ "Até que", TimeUnit.MILLISECONDS, temp_narrativa);
+	 Digita(".....", TimeUnit.MILLISECONDS, temp_drama);
+	 
+	 Digita("\n\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ " + "\n‎‎ ", TimeUnit.MILLISECONDS, temp_segundo);
+	 
+	 Digita("\nVOCÊ MORREU.", TimeUnit.MILLISECONDS, temp_segundo);
   }
 
+ 
   public static void voltaDormir() throws Exception {
 	  
 	  
